@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>省錢專區 - Universe</title>
+    <%- include('share/link'); -%>
+
+
+    <!-- 折扣券 -->
+    <link rel="stylesheet" href="/css/discount/indexP1.css">
+    <link rel="stylesheet" href="/css/discount/indexBG.css">
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <%- include('share/header'); -%>
+    <indexBody>
+
+        <div>
+            <%- include('share/logo'); -%>
+
+            <!-- 分類 -->
+            <div class="DStop">
+                <!-- 返回鍵 -->
+                <a href=""></a><img id="DSreturn" class="curHover" src="/img/shopping/返回箭頭.png">
+                <!-- 分類圖片 -->
+                <img id="DSlogoimg" src="/img/shopping/優惠券.png">
+
+            </div>
+            <!-- 左側導覽列 -->
+            <div style="display: flex;">
+                <div class="DSnav">
+                    <nav>
+                        <ol>
+                            <div class="DSnavhover">
+                                <li class="product btn1">
+                                    優惠券
+                                </li>
+                            </div>
+                            <div class="DSnavhover">
+                                <li class="product btn2">
+                                    折扣碼
+                                </li>
+                            </div>
+
+                        </ol>
+                    </nav>
+
+                </div>
+                <!-- 主袋子 -->
+                <div class="DSgroup">
+                    <!-- 優惠券 -->
+                    <div class="DSdiscount">
+                        <div class="DScard">
+                            <div class="DScardbody">
+                                <div class="DScardimg">
+                                    <img src="/img/shopping/NS.png" alt="">
+                                </div>
+                                <div class="DScardbg">NS專區</div>
+                            </div>
+                            <div class="DStext">
+                                <h3>每日限量優惠券</h3>
+                                <h2>折100元&nbsp;&nbsp;低消$2000</h2>
+                                <span>有效期限&nbsp;領取當日23:59</span>
+                            </div>
+                            <div class="DSbtn">
+                                <button class="NSbtn">領取</button>
+                            </div>
+                        </div>
+
+                        <div class="DScard2">
+                            <div class="DScardbody">
+                                <div class="DScardimg2">
+                                    <img src="/img/shopping/ps.png" alt="">
+                                </div>
+                                <div class="DScardbg2">PS4專區</div>
+                            </div>
+                            <div class="DStext">
+                                <h3>每日限量優惠券</h3>
+                                <h2>折100元&nbsp;&nbsp;低消$2000</h2>
+                                <span>有效期限&nbsp;領取當日23:59</span>
+                            </div>
+                            <div class="DSbtn">
+                                <button class="PS4btn">領取</button>
+                            </div>
+                        </div>
+                        <div class="DScard3">
+                            <div class="DScardbody">
+                                <div class="DScardimg3">
+                                    <img src="/img/shopping/ZB.png" alt="">
+                                </div>
+                                <div class="DScardbg3">XBOX專區</div>
+                            </div>
+                            <div class="DStext">
+                                <h3>每日限量優惠券</h3>
+                                <h2>折100元&nbsp;&nbsp;低消$2000</h2>
+                                <span>有效期限&nbsp;領取當日23:59</span>
+                            </div>
+                            <div class="DSbtn">
+                                <button class="XBOXbtn">領取</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 折扣碼 -->
+                    <div class="DStable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>折扣項目</td>
+                                    <td>優惠代碼</td>
+                                    <td>截止日</td>
+                                </tr>
+                            </thead>
+                            <tbody class="dstable">
+                               
+                               
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </indexBody>
+
+
+
+
+</body>
+<script src="/js/share/share.js"></script>
+<script>
+    // 左側導覽特效
+    $(".product").hover(function () {
+        $(this).parent(".DSnavhover").append('<img class="DSnavhoverafter" src="/img/shopping/左邊導覽列hover黃.png" alt="">');
+    }, function () {
+        $(".DSnavhoverafter").remove();
+    });
+    //左側導覽選取
+    var DStype = {
+        DSEvent1: function () {
+            $(".DSdiscount").show();
+            $(".DStable").hide();
+            document.getElementById('DSlogoimg').src = '/img/shopping/優惠券.png';
+        },
+        DSEvent2: function () {
+            $(".DSdiscount").hide();
+            $(".DStable").show();
+            document.getElementById('DSlogoimg').src = '/img/shopping/折扣碼.png';
+        }
+    }
+
+    function DSEvent() {
+        $(".DSdiscount").show();
+        $(".DStable").hide();
+
+    }
+
+    DSEvent();
+    window.addEventListener("load", function () {
+        $(".btn1").click(DStype.DSEvent1);
+        $(".btn2").click(DStype.DSEvent2);
+    })
+
+    $(function () {
+
+
+        var ticketList = [];
+
+        $.get("/discount/ticket", function (e) {
+
+            ticketList = JSON.parse(e);
+
+        })
+
+        $(document).on("click", ".NSbtn", function () {
+            if ("<%= data %>") {
+                $(this).addClass("afterDSbtn").attr("disabled", "true");
+                $.ajax({
+                    type: "put",
+                    url: "/discount/ticketNS",
+                    data: ticketList[0]
+                })
+            } else {
+                alert("請登入");
+            }
+        })
+        $(document).on("click", ".PS4btn", function () {
+            if ("<%= data %>") {
+                $(this).addClass("afterDSbtn").attr("disabled", "true");
+                $.ajax({
+                    type: "put",
+                    url: "/discount/ticketps4",
+                    data: ticketList[0]
+                })
+            } else {
+                alert("請登入");
+            }
+
+
+
+        })
+        $(document).on("click", ".XBOXbtn", function () {
+            if ("<%= data %>") {
+                $(this).addClass("afterDSbtn").attr("disabled", "true");
+                $.ajax({
+                    type: "put",
+                    url: "/discount/ticketxbox",
+                    data: ticketList[0]
+                })
+            } else {
+                alert("請登入");
+            }
+
+        })
+
+
+
+
+    })
+    $(function () {
+
+
+        var ticketList = [];
+
+        $.get("/discount/dscode", function (e) {
+
+            ticketList = JSON.parse(e);
+            refresh();
+        })
+        function refresh() {
+            $.each(ticketList, function (key, obj) {
+                const discount_num = obj.discount_num;
+                const discount_item = obj.discount_item;
+                const deadline = new Date(obj.deadline);
+                var yy = deadline.getFullYear();
+                var mm = (deadline.getMonth() + 1 < 10 ? '0' : '') + (deadline.getMonth() + 1);
+                var dd = (deadline.getDate() < 10 ? '0' : '') + deadline.getDate();
+                var date_value = yy + '-' + mm + '-' + dd;
+          
+                a=' <tr>\
+                        <td>'+discount_item+'</td>\
+                        <td> '+discount_num+'</td>\
+                        <td>'+date_value+'</td>\
+                    </tr>\
+                  '
+
+
+                $(".dstable").append(a);
+             })
+            
+        }
+})
+</script>
+
+</html>

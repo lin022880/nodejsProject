@@ -1,0 +1,387 @@
+/* set左上 */
+
+img#hot {
+    width: 160px;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+}
+
+
+/* 大標熱銷排行 */
+
+img#P3Title1 {
+    width: 35vw;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 2vw;
+}
+
+
+/* 熱銷排行商品位置 */
+
+div#topPd {
+    display: flex;
+    position: absolute;
+    top: 10vw;
+    width: 100%;
+    height: 16vw;
+    justify-content: center;
+}
+
+
+/* switch標題 */
+
+img#switchTitle {
+    position: absolute;
+    top: 29vw;
+    width: 20vw;
+    left: 3%;
+}
+
+
+/* switch商品位置 */
+
+div#switch {
+    top: 33vw;
+}
+
+
+/* ps4標題 */
+
+img#ps4Title {
+    position: absolute;
+    top: 54vw;
+    width: 20vw;
+    left: 3%;
+}
+
+
+/* ps4商品位置 */
+
+div#ps4 {
+    top: 39vw;
+}
+
+
+/* xbox標題 */
+
+img#xboxTitle {
+    position: absolute;
+    top: 79vw;
+    width: 20vw;
+    left: 3%;
+}
+
+
+/* xbox商品位置 */
+
+div#xbox {
+    top: 45vw;
+}
+
+
+/* 商品袋子置中 */
+
+.pdSetPosition {
+    position: relative;
+}
+
+.allPdBox {
+    width: 80%;
+    height: 19.5vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pdSet {
+    position: relative;
+    /* top: 8%; */
+    height: 100%;
+    width: 119%;
+    display: flex;
+}
+
+
+/* 左箭頭 */
+
+img.P3L {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    width: 3%;
+}
+
+
+/* 右箭頭 */
+
+img.P3R {
+    z-index: 10;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    width: 3%;
+}
+
+
+/* 分三格 */
+
+.pdThreeEqual {
+    text-align: center;
+    position: relative;
+    height: 16vw;
+    width: 12%;
+    margin: 0 1%;
+}
+
+
+/* 底座 */
+
+.pdThreeEqual>.P3SetBottomImg {
+    /* display: none; */
+    width: 100%;
+    padding: 0 7%;
+    margin-top: -15%;
+}
+
+.pdThreeEqual>.P3SetBottom {
+    width: 100%;
+    position: relative;
+    margin: 1% 0;
+    text-align: center;
+}
+
+
+/* 文字背景 */
+
+.pdThreeEqual>div>img {
+    width: 15vw;
+    height: 7vh;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 商品文字 */
+
+.pdThreeEqual>div>span {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.8vw;
+    z-index: 1;
+}
+
+
+/* 商品價格 */
+
+span.pdPrice {
+    color: #00FFBA;
+    font-size: 1.3vw;
+}
+
+
+/* set商品袋子 */
+
+.pdBox {
+    width: 100%;
+    height: 72%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* 袋子內產品 */
+
+.pdBox .product {
+    height: 83%;
+    width: 87%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 1;
+    top: 53.3vh;
+    left: 50%;
+    transform: translate(-50%, -50vh);
+    filter: drop-shadow(2px 4px 6px #ffffff80);
+}
+
+.P3Hover {
+    width: 18%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+
+/* 瀏覽更多 */
+
+div#more {
+    position: absolute;
+    top: 104vw;
+    display: flex;
+    width: 81vw;
+    align-items: center;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+div#more>span {
+    color: white;
+    font-size: 1.3vw;
+}
+
+div#more>hr {
+    background: white;
+    width: 90%;
+}
+
+
+/* 熱門新品大標 */
+
+img#hotNew {
+    width: 35vw;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 106vw;
+}
+
+
+/* 熱門新品位置 */
+
+div#hotNewPdBox {
+    width: 90%;
+    position: absolute;
+    top: 112vw;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 熱門新品商品袋子 */
+
+.hotNewPd {
+    position: relative;
+    width: 19%;
+    margin: 1.5% 3%;
+}
+
+
+/* 熱門新品背景 */
+
+.hotNewPdBg {
+    width: 100%;
+}
+
+
+/* 熱門新品星星 */
+
+img.hotNewPdStar {
+    position: absolute;
+    top: 7%;
+    left: 14%;
+    width: 12%;
+}
+
+
+/* 熱門新品商品圖 */
+
+img.hotNewPdImg {
+    width: 65%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 43%;
+}
+
+
+/* 價格袋子 */
+
+.hotNewPdPriceBox {
+    position: absolute;
+    bottom: 21%;
+    right: 7%;
+    width: 38%;
+}
+
+
+/* 價格背景 */
+
+img.hotNewPdPriceImg {
+    width: 100%;
+}
+
+
+/* 價格 */
+
+span.hotNewPdPrice {
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1.3vw;
+}
+
+
+/* 名稱袋子 */
+
+.hotNewPdNameBox {
+    position: relative;
+    color: white;
+}
+
+
+/* 名稱背景 */
+
+img.hotNewPdNameImg {
+    width: 23vw;
+    height: 4vw;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 名稱 */
+
+span.hotNewPdName {
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1vw;
+}
+
+
+/* 看更多 */
+
+#seeMore {
+    font-size: 1.2vw;
+    position: absolute;
+    left: 8%;
+    top: 161vw;
+    color: white;
+}
+
+span.seeMoreA {
+    border: 1px solid;
+    padding: 0.3vw;
+}
+
+.seeMoreA>a {
+    color: white;
+}

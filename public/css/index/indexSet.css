@@ -1,0 +1,63 @@
+#myOrderGame:hover,
+#myOrderGame *:hover {
+    cursor: url("/img/cur/Xbox.png"), auto;
+}
+
+
+/* 動態↓ */
+
+[data-aos="example"] {
+    /*初始值*/
+    /* transform: rotate(360deg); */
+    opacity: 0;
+    position: absolute;
+    bottom: -11vw;
+}
+
+[data-aos="example"].aos-animate {
+    /* transform: rotate(0); */
+    opacity: 1;
+    bottom: 0;
+}
+
+
+/* 動態↑ */
+
+
+/* 影片崁入↓ */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* padding-bottom: 56.25%為影片高度與寬度的比例16:9計算得來，9除以16=0.5625換算高度比0.5625=56.25% padding-top: 30px:用於修正的高度，可用25px或30px */
+
+
+/* 影片崁入↑ */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(192, 192, 192, 0.9) inset;
+    /*淡淡的白*/
+    transition: background-color 5000s ease-in-out 0s;
+    /*透明*/
+    -webkit-text-fill-color: #fff;
+    /*字體顏色*/
+}

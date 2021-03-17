@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車 - Universe</title>
+    <%- include('share/link'); -%>
+
+        <!-- 購物車用 -->
+        <link rel="stylesheet" href="/css/shoppingcarcss/indexP1.css">
+        <link rel="stylesheet" href="/css/shoppingcarcss/indexBG.css">
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <%- include('share/header'); -%>
+        <indexBody>
+            <div>
+
+                <%- include('share/logo'); -%>
+
+                    <!-- 返回鍵 -->
+                    <a href="/shopping"> <img id="CARreturn" class="curHover" src="/img/shopping/購物車頁面/返回.png" alt=""></a>
+                    <!-- 購物車 -->
+                    <div class="CAR">
+
+
+                        <div class="CARprogressbar">
+                            <!-- 1.購買清單 -->
+                            <div class="CARbar">
+                                <h6>1.</h6>
+                                <h7>確認購買清單</h7>
+                                <img id="CARbarimg1" src="/img/shopping/購物車頁面/進度條藍.png" alt="">
+                            </div>
+                            <!-- 2.付款方式 -->
+                            <div class="CARbar">
+                                <h6>2.</h6>
+                                <h7>選擇付款方式</h7>
+                                <img id="CARbarimg2" src="/img/shopping/購物車頁面/進度條藍.png" alt="">
+                            </div>
+                            <!-- 3.運送資料 -->
+                            <div class="CARbar">
+                                <h6>3.</h6>
+                                <h7>填寫運送資料</h7>
+                                <img id="CARbarimg3" src="/img/shopping/購物車頁面/進度條藍.png" alt="">
+                            </div>
+                            <!-- 購買完成 -->
+                            <div class="CARbar">
+                                <h6>4.</h6>
+                                <h7>完成購買</h7>
+                                <img id="CARbarimg4" src="/img/shopping/購物車頁面/進度條藍.png" alt="">
+                            </div>
+                        </div>
+                        <!-- 商品清單內容 -->
+                        <div class="CARtype1">
+                            <div class="CARitem">
+                                <table>
+                                    <thead>
+                                        <tr class="CARitemtr">
+                                            <td> </td>
+                                            <td>商品名稱</td>
+                                            <td>數量</td>
+                                            <td>單價</td>
+                                            <td>金額</td>
+                                            <td>刪除</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="CARtbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="CARtotal">
+                                <span>小計金額:NT$</span><span id="zongji"> </span>
+                            </div>
+                            <div class="CARbtn1">
+                                <a href="/shopping"><img class="btn curHover" src="/img/shopping/購物車頁面/繼續購物2.png" alt=""></a>
+                                <img class="btn btn2 orderOK curHover" src="/img/shopping/購物車頁面/下一步2.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <!-- 付款方式 -->
+                        <div class="CARpayment">
+                            <h2 id="CARpaymenttitle">付款方式</h2>
+                            <div class="CARpaymenttype">
+                                <ul id="abc">
+                                    <li class="navdown">7-11 ibon付款</li>
+                                    <li>貨到付款</li>
+                                    <li>信用卡結帳</li>
+                                    <li>全家Famiport付款</li>
+                                    <li>銀行或郵局轉帳</li>
+                                    <li>郵局無摺存款</li>
+                              </ul>
+                            </div>
+                            <div class="CARdiscount">
+                                <span>使用折扣碼</span>
+                                <input type="text" id="discountNum">
+                                <button class="btn btn-outline-secondary discountbtn">確認</button>
+                                <span>使用優惠卷</span>
+                                <select id="changeNum">
+
+                        </select>
+                            </div>
+                            <div class="CARbtn2">
+                                <img class="btn btn1" src="/img/shopping/購物車頁面/返回2.png" alt="">
+                                <img class="btn btn3" src="/img/shopping/購物車頁面/下一步2.png" alt="">
+                            </div>
+                        </div>
+                        <!-- 運送資料 -->
+                        <div class="CARtype3">
+                            <div class="CARtransport">
+                                <div class="CARship">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>商品名稱</td>
+                                                <td>數量</td>
+                                                <td>單價</td>
+                                                <td>金額</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="CARshiptable">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="CARform">
+                                    <form>
+                                        <table class="CARtable2">
+                                            <thead>
+                                                <tr>
+                                                    <td>付款資料</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="paymethod">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>購買人資料</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&emsp;帳號:
+                                                        <%= data%>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>收件人資訊</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="CARtbody2">
+
+                                                <tr>
+                                                    <td>
+                                                        <label for="CARurl">&emsp;地址&emsp; </label>
+
+
+
+                                                        <input type="text" size="50" id="CARurl" placeholder="輸入地址"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <label for="CARname">&emsp;收件人</label>
+                                                        <input type="text" id="CARname">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td> <label for="CARtelephone">&emsp;手機&emsp;</label>
+                                                        <input type="tel" id="CARtelephone"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <label for="CARother" style="vertical-align: top;
+                                                    position: relative;">&emsp;備註&emsp;
+                                                </label>
+                                                        <textarea name="" id="CARother"></textarea>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&emsp;發票&emsp;
+                                                        <input type="radio" name="invoice" id="donate"><label for="donate">捐贈發票</label>
+                                                        <input type="radio" name="invoice" id="electronic"><label for="electronic">電子發票</label>
+                                                        <input type="radio" name="invoice" id="triple"><label for="triple">三聯式發票</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td> &emsp;運送方式:
+                                                        <select id="changetransport">
+                                                    <option value="90">郵寄寄送90元</option>
+                                                    <option value="120">宅配/快遞120元</option>
+                                                </select>
+                                                        <div class="CARshiptotal">
+
+                                                            <div><span>小計金額:NT$<span id="money">12980</span></span>
+                                                            </div>
+                                                            <div class="zerohidden" style="color: red;"><span>折扣碼:-NT$<span
+                                                                id="Lessdicount">0</span></span>
+                                                            </div>
+                                                            <div class="zerohidden1" style="color: red;"><span>優惠券:-NT$<span
+                                                                id="Lessticket">100</span></span>
+                                                            </div>
+                                                            <div> <span>運送金額:NT$<span id="Lessmoney">90</span></span>
+                                                            </div>
+                                                            <div class="line"></div>
+                                                            <span class="totalred">總金額:NT$<span
+                                                            id="totalmoney">13060</span></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="CARbtn3">
+                                <img class="btn btn2" src="/img/shopping/購物車頁面/返回2.png" alt="">
+                                <img class="btn btn4 orderOK2" src="/img/shopping/購物車頁面/確認結帳.png" alt="">
+                            </div>
+                        </div>
+                        <!-- 完成購買 -->
+                        <div class="CARfinish">
+                            <img src="/img/shopping/購物車頁面/k2.png" alt="">
+                            <h2>完成購買...!!!</h2>
+                            <!-- <h3>超商付款代碼:E123456789</h3> -->
+                            <!-- <h4>代碼在生成後24小時過期</h4> -->
+                            <a href="/"><img class="btn" src="/img/shopping/購物車頁面/繼續購物2.png" alt=""></a>
+                        </div>
+                    </div>
+        </indexBody>
+</body>
+<script src="/js/share/share.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.15-rc1/jquery.twzipcode.min.js"></script>
+<script>
+    // 步驟1~4切換
+    var CARtype = {
+        CARtypeEvent1: function() {
+            $(".CARtype1").show();
+            $(".CARpayment").hide();
+            $(".CARtype3").hide();
+            $(".CARfinish").hide();
+            document.getElementById('CARbarimg1').src = '/img/shopping/購物車頁面/進度條粉.png'
+            document.getElementById('CARbarimg2').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg3').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg4').src = '/img/shopping/購物車頁面/進度條藍.png'
+
+
+        },
+        CARtypeEvent2: function() {
+            $(".CARtype1").hide();
+            $(".CARpayment").show();
+            $(".CARtype3").hide();
+            $(".CARfinish").hide();
+            document.getElementById('CARbarimg1').src = '/img/shopping/購物車頁面/進度條藍.png';
+            document.getElementById('CARbarimg2').src = '/img/shopping/購物車頁面/進度條粉.png';
+            document.getElementById('CARbarimg3').src = '/img/shopping/購物車頁面/進度條藍.png';
+            document.getElementById('CARbarimg4').src = '/img/shopping/購物車頁面/進度條藍.png';
+        },
+        CARtypeEvent3: function() {
+            $(".CARtype1").hide();
+            $(".CARpayment").hide();
+            $(".CARtype3").show();
+            $(".CARfinish").hide();
+            document.getElementById('CARbarimg1').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg2').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg3').src = '/img/shopping/購物車頁面/進度條粉.png'
+            document.getElementById('CARbarimg4').src = '/img/shopping/購物車頁面/進度條藍.png'
+        },
+        CARtypeEvent4: function() {
+            $(".CARtype1").hide();
+            $(".CARpayment").hide();
+            $(".CARtype3").hide();
+            $(".CARfinish").show();
+            document.getElementById('CARbarimg1').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg2').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg3').src = '/img/shopping/購物車頁面/進度條藍.png'
+            document.getElementById('CARbarimg4').src = '/img/shopping/購物車頁面/進度條粉.png'
+        }
+
+    }
+
+    function CARtypeEvent() {
+        $(".CARtype1").show();
+        $(".CARpayment").hide();
+        $(".CARtype3").hide();
+        $(".CARfinish").hide();
+        document.getElementById('CARbarimg1').src = '/img/shopping/購物車頁面/進度條粉.png'
+        document.getElementById('CARbarimg2').src = '/img/shopping/購物車頁面/進度條藍.png'
+        document.getElementById('CARbarimg3').src = '/img/shopping/購物車頁面/進度條藍.png'
+        document.getElementById('CARbarimg4').src = '/img/shopping/購物車頁面/進度條藍.png'
+    }
+    CARtypeEvent();
+    window.addEventListener("load", function() {
+            $(".btn1").click(CARtype.CARtypeEvent1);
+            $(".btn2").click(CARtype.CARtypeEvent2);
+            $(".btn3").click(CARtype.CARtypeEvent3);
+            $(".btn4").click(CARtype.CARtypeEvent4);
+
+        })
+        //確認購買清單
+    $(function() {
+            var pdList = [];
+            var discountList = [];
+
+            $.get("/shoppingcar/discount", function(e) {
+                discountList = JSON.parse(e);
+
+                refresh();
+            })
+
+            $.get("/shoppingcar/pdorder", function(e) {
+                pdList = JSON.parse(e);
+
+                refresh();
+
+            })
+
+            function refresh() {
+                $(".CARtbody").empty();
+                $(".CARshiptable").empty();
+                $.each(pdList, function(key, obj) {
+                        const productID = obj.productID;
+                        const type = obj.type;
+                        const style = obj.style;
+                        const images = obj.images;
+                        const pdname = obj.name;
+                        const price = obj.price;
+                        const quantity = obj.quantity;
+                        const sales = obj.sales;
+
+
+                    // 沒特價
+                        a = '<tr class="CARitemtr">\
+                    <td>\
+                        <img id="CARproduct" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png" alt="">\
+                        <img id="CARproductbg" src="/img/shopping/購物車頁面/formation_select_bg2.png" alt="">\
+                    </td>\
+                    <td>' + pdname + '</td>\
+                    <td>\
+                        <input type="button" value="-" class="reduce" style="width: 19%;" />\
+                        <input type="text" size="1" value="' + quantity + '" class="textNum pd' + productID + '" />\
+                        <input type="button" value="+" class="add" style="width: 19%;" />\
+                    </td>\
+                    <td>\
+                        <span class="danjia">' + price + '</span>\
+                    </td>\
+                    <td>\
+                        <span class="xiaoji">' + price * quantity + '</span>\
+                    </td>\
+                    <td align="center" class="deletetd">\
+                        <button class="deleteOne">\
+                        <img class="delete" src="/img/shopping/購物車頁面/XX.png" alt="">\
+                        </button>\
+                        <input id="pdID' + productID + '" type="hidden" value="' + productID + '">\
+                    </td>\
+                    </tr>\
+                '
+                        b = ' <tr class="CARshipitemtr">\
+                        <td>' + pdname + '</td>\
+                        <td class=pd' + productID + '>' + quantity + '</td>\
+                        <td>NT' + price + '</td>\
+                        <td>NT' + price * quantity + '</td>\
+                    </tr>\
+                '
+                //  有特價
+                c = '<tr class="CARitemtr">\
+                    <td>\
+                        <img id="CARproduct" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png" alt="">\
+                        <img id="CARproductbg" src="/img/shopping/購物車頁面/formation_select_bg2.png" alt="">\
+                    </td>\
+                    <td>' + pdname + '</td>\
+                    <td>\
+                        <input type="button" value="-" class="reduce" style="width: 19%;" />\
+                        <input type="text" size="1" value="' + quantity + '" class="textNum pd' + productID + '" />\
+                        <input type="button" value="+" class="add" style="width: 19%;" />\
+                    </td>\
+                    <td>\
+                        <span class="danjia">' + (price*(100-sales)*0.01).toFixed(0) + '</span>\
+                    </td>\
+                    <td>\
+                        <span class="xiaoji">' + (price*(100-sales)*0.01).toFixed(0) * quantity + '</span>\
+                    </td>\
+                    <td align="center" class="deletetd">\
+                        <button class="deleteOne">\
+                        <img class="delete" src="/img/shopping/購物車頁面/XX.png" alt="">\
+                        </button>\
+                        <input id="pdID' + productID + '" type="hidden" value="' + productID + '">\
+                    </td>\
+                    </tr>\
+                '
+                        d = ' <tr class="CARshipitemtr">\
+                        <td>' + pdname + '</td>\
+                        <td class=pd' + productID + '>' + quantity + '</td>\
+                        <td>NT' + (price*(100-sales)*0.01).toFixed(0) + '</td>\
+                        <td>NT' + (price*(100-sales)*0.01).toFixed(0) * quantity + '</td>\
+                    </tr>\
+                '
+                       if(sales!=0){
+                        $(".CARtbody").append(c);
+                        $(".CARshiptable").append(d);
+                       }else{
+                        $(".CARtbody").append(a);
+                        $(".CARshiptable").append(b);
+                       }
+                       
+                       
+
+                    })
+                    //總價格
+                function totalPrice() {
+
+                    var zong = 0;
+                    $(".xiaoji").each(function() {
+                        var all = parseInt($(this).text());
+                        zong += all;
+                    })
+                    $("#zongji").text(zong);
+
+
+                };
+                $(".textNum").prop("disabled", true);
+
+                //減
+                $(".reduce").click(function() {
+
+                    //取得值
+                    var num = $(this).siblings(".textNum").val();
+                    //遞減
+                    num--;
+                    // 把值存入
+                    $(this).siblings(".textNum").val(num);
+                    // 最小數字為1
+                    if (num <= 1) {
+                        $(this).prop("disabled", true);
+                    };
+                    //獲取單價
+                    var danjia = $(this).parent().siblings().children(".danjia").text();
+                    //計算小記
+                    var xiaoji = danjia * num;
+                    // 顯示小記
+                    $(this).parent().siblings().children(".xiaoji").text(xiaoji);
+
+                    totalPrice();
+
+                })
+
+                //加
+                $(".add").click(function() {
+                        var num = $(this).siblings(".textNum").val();
+                        num++;
+                        $(this).siblings(".textNum").val(num);
+                        if (num > 0) {
+                            $(this).siblings(".reduce").prop("disabled", false);
+                        };
+                        var danjia = $(this).parent().siblings().children(".danjia").text();
+
+                        var xiaoji = danjia * num;
+                        $(this).parent().siblings().children(".xiaoji").text(xiaoji);
+                        totalPrice();
+
+                    })
+                    //刪除
+                $(".deleteOne").click(function() {
+
+
+                    for (var i = 0; i < pdList.length; i++) {
+                        a = $(this).parents(".CARitemtr").index();
+
+                    }
+
+                    $.ajax({
+                        type: "delete",
+                        url: "/shoppingcar/pdorder",
+                        data: pdList[a]
+                    })
+                    $(this).parents(".CARitemtr").remove();
+                    $.get("/shoppingcar/pdorder", function(e) {
+                        pdList = JSON.parse(e);
+                    })
+                    totalPrice();
+                })
+                totalPrice();
+
+                // 小記金額+運送金額-折扣碼-優惠券=總金額
+                $("#money").text($("#zongji").text());
+                a = parseInt($("#zongji").text()) + parseInt($("#Lessmoney").text());
+                $("#totalmoney").text(a);
+                $("#changetransport").change(function() {
+                    b = $(this).val();
+                    $("#Lessmoney").text(b);
+                    a = parseInt($("#zongji").text()) + parseInt($("#Lessmoney").text()) - parseInt($("#Lessdicount").text()) - $("#Lessticket").val();
+                    $("#totalmoney").text(a);
+                })
+
+            }
+
+            // 更改產品數量確認
+            $(".orderOK").click(function() {
+
+                for (var i = 0; i < pdList.length; i++) {
+
+                    pdList[i].quantity = $(".pd" + pdList[i].productID).val();
+                    pdList[i].productID = $("#pdID" + pdList[i].productID).val();
+
+                    $.ajax({
+                        type: "put",
+                        url: "/shoppingcar/pdorder",
+                        data: pdList[i]
+                    })
+                }
+                $.get("/shoppingcar/pdorder", function(e) {
+                    pdList = JSON.parse(e);
+
+                    refresh();
+
+                })
+
+            })
+
+
+        })
+        //選擇付款方式
+    $(function() {
+            $("#paymethod").html("&emsp;7-11 ibon付款");
+            $("#abc li").click(function() {
+                $("#abc li").eq($(this).index()).addClass("navdown").siblings().removeClass("navdown");
+
+                $("#paymethod").html("&emsp;" + $("#abc li").eq($(this).index()).text());
+            })
+
+        })
+        //  判斷優惠券 
+    $(function() {
+            var ticketList = [];
+            $.get("/shoppingcar/ticket", function(e) {
+                ticketList = JSON.parse(e);
+                refresh();
+            })
+
+            function refresh() {
+                $(".zerohidden1").css("display", "none");
+                var ps4ticket = ticketList[0].ps4_discount;
+                var switchticket = ticketList[0].switch_discount;
+                var xboxticket = ticketList[0].xbox_discount;
+                $("#changeNum").append('<option value="0" selected="selected">無</option>');
+                for (var i = 0; i < ps4ticket; i++) {
+                    $("#changeNum").append('<option  value="100">PS4折100元</option>');
+                }
+                for (var i = 0; i < switchticket; i++) {
+                    $("#changeNum").append('<option value="100">Switch折100元</option>');
+                }
+                for (var i = 0; i < xboxticket; i++) {
+                    $("#changeNum").append('<option value="100">Xbox折100元</option>');
+                }
+
+                $("#changeNum").change(function() {
+                    $(".zerohidden1").css('display', 'block');
+                    b = $(this).val();
+                    $("#Lessticket").val(b);
+                    $("#Lessticket").text(b);
+                    a = parseInt($("#zongji").text()) + parseInt($("#Lessmoney").text()) - parseInt($("#Lessdicount").text()) - $("#Lessticket").val();
+                    $("#totalmoney").text(a);
+
+                })
+                $(".orderOK2").click(function() {
+                    // 判斷優惠卷使用哪一張並紀錄資料庫
+
+                    ticketList[0].xbox_discount = ticketList[0].xbox_discount;
+                    ticketList[0].ps4_discount = ticketList[0].ps4_discount;
+                    ticketList[0].switch_discount = ticketList[0].switch_discount;
+                    ticketList[0].use_xbox = ticketList[0].use_xbox;
+                    ticketList[0].use_ps4 = ticketList[0].use_ps4;
+                    ticketList[0].use_switch = ticketList[0].use_switch;
+                    switch ($("#changeNum").find("option:selected").text()) {
+                        case "Xbox折100元":
+                            ticketList[0].xbox_discount = ticketList[0].xbox_discount - 1;
+                            ticketList[0].use_xbox = ticketList[0].use_xbox + 1;
+                            $.ajax({
+                                type: "put",
+                                url: "/shoppingcar/ticket",
+                                data: ticketList[0]
+                            })
+                            break;
+                        case "PS4折100元":
+                            ticketList[0].ps4_discount = ticketList[0].ps4_discount - 1;
+                            ticketList[0].use_ps4 = ticketList[0].use_ps4 + 1;
+                            $.ajax({
+                                type: "put",
+                                url: "/shoppingcar/ticket",
+                                data: ticketList[0]
+                            })
+                            break;
+                        case "Switch折100元":
+                            ticketList[0].switch_discount = ticketList[0].switch_discount - 1;
+                            ticketList[0].use_switch = ticketList[0].use_switch + 1;
+                            $.ajax({
+                                type: "put",
+                                url: "/shoppingcar/ticket",
+                                data: ticketList[0]
+                            })
+                            break;
+                    }
+                })
+
+            }
+
+        })
+        //  判斷折扣碼
+    $(function() {
+            var discountList = [];
+
+            $.get("/shoppingcar/discount", function(e) {
+                discountList = JSON.parse(e);
+
+                // refresh();
+            })
+
+            $(".zerohidden").css("display", "none");
+            $(".discountbtn").click(function() {
+                var x = false;
+                for (var i = 0; i < discountList.length; i++) {
+                    if (discountList[i].discount_num == $("#discountNum").val()) {
+                        $("#Lessdicount").text("100");
+                        a = parseInt($("#zongji").text()) + parseInt($("#Lessmoney").text()) - parseInt($("#Lessdicount").text()) - $("#Lessticket").val();
+                        $("#totalmoney").text(a);
+                        x = true;
+                    }
+                }
+
+                if (x == true) {
+                    $(".zerohidden").css('display', 'block');
+
+                    Swal.fire("可以使用");
+                } else {
+                    Swal.fire("輸入錯誤");
+
+                }
+            })
+
+        })
+        // 會員資料
+    $(function() {
+        var userList = [];
+        var orderList = [];
+        var ticketList = [];
+        $.get("/shoppingcar/ticket", function(e) {
+            ticketList = JSON.parse(e);
+        })
+        $.get("/shoppingcar/user", function(e) {
+            userList = JSON.parse(e);
+            refresh();
+        })
+        $.get("/shoppingcar/order", function(e) {
+            orderList = JSON.parse(e);
+        })
+
+
+
+        function refresh() {
+            $("#CARurl").val(userList[0].address);
+            $("#CARname").val(userList[0].name);
+            $("#CARtelephone").val(userList[0].phone);
+        }
+
+        $(".orderOK2").click(function() {
+            const now = new Date();
+            let month = now.getMonth() + 1;
+            let day = now.getDate();
+            let hour = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            runwater = now.getFullYear().toString() + month.toString() + day + (Math.round(Math.random() * 89 + 100)).toString();
+
+            orderList[0].order_name = $("#CARname").val();
+            orderList[0].order_phone = $("#CARtelephone").val();
+            orderList[0].order_address = $("#CARurl").val();
+            orderList[0].order_method = $("#paymethod").html().substr(1);
+            orderList[0].order_remark = $("#CARother").val();
+            orderList[0].total = parseInt($("#totalmoney").text());
+            orderList[0].count_pd = $(".CARshiptable").find("tr").length;
+            orderList[0].discount = 0;
+
+            // 判斷折扣碼有無使用並紀錄資料庫
+            if ($("#Lessdicount").text() != 0) {
+                orderList[0].discount = 1;
+            }
+            // 判斷優惠卷使用哪一張並紀錄資料庫
+
+            switch ($("#changeNum").find("option:selected").text()) {
+                case "Xbox折100元":
+                    orderList[0].ticket = "Xbox折100元";
+
+                    break;
+                case "PS4折100元":
+                    orderList[0].ticket = "PS4折100元";
+
+                    break;
+                case "Switch折100元":
+                    orderList[0].ticket = "Switch折100元";
+
+                    break;
+                default:
+                    orderList[0].ticket = "無";
+                    break;
+            }
+
+            // 判斷寄送方式
+            if ($("#changetransport").val() == 90) {
+                transport = "郵寄寄送90元";
+            } else {
+                transport = "宅配/快遞120元";
+            }
+            orderList[0].transport = transport;
+            orderList[0].runwater = runwater;
+            $.ajax({
+                type: "post",
+                url: "/shoppingcar/order",
+                data: orderList[0]
+            })
+
+            $.ajax({
+                type: "DELETE",
+                url: "/shoppingcar/order",
+            })
+
+
+        })
+
+
+    })
+</script>
+
+</html>

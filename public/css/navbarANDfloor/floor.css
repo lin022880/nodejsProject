@@ -1,0 +1,50 @@
+div#floorBox {
+    width: 100%;
+    position: relative;
+}
+
+#floor {
+    position: absolute;
+    bottom: 0;
+}
+
+img#floorImg {
+    width: 100%;
+}
+
+table#floorP {
+    width: 34%;
+    position: absolute;
+    top: 50%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+tr.floorPTitle {
+    font-size: 1.4vw;
+}
+
+tr.floorP {
+    font-size: 1.1vw;
+}
+
+table#floorP th,
+table#floorP td {
+    border-right: 1px solid;
+}
+
+table#floorP th:last-child,
+table#floorP td:last-child {
+    border-right: unset;
+}
+
+table#floorP a {
+    color: white;
+    text-decoration: none;
+}
+
+table#floorP a:hover {
+    filter: invert(0.2);
+}

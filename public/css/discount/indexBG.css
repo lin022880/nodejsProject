@@ -1,0 +1,7 @@
+/* 背景 */
+
+body {
+    background-image: url("/img/shopping/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+}

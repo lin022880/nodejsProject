@@ -1,0 +1,467 @@
+body,
+#myOrder,
+#myOrderGame {
+    padding: 0 !important;
+}
+
+#myOrder *:focus {
+    outline: none;
+}
+
+#pageShowPdBox {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* 背景 */
+
+#P3OutBoxImg {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* 關閉按鈕 */
+
+#P3OutBoxClose {
+    width: 5vw;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.close {
+    opacity: 1;
+}
+
+
+/* 購物車按鈕 */
+
+#P3OutBoxcar {
+    width: 4vw;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+/* 左邊商品名稱 */
+
+#P3OutSetPdNameBox {
+    width: 25%;
+    height: 20%;
+    color: white;
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+span#P3OutBoxSetPdName {
+    font-size: 2.5vw;
+    position: absolute;
+    left: 1%;
+}
+
+span#P3OutBoxPdName {
+    width: 100%;
+    font-size: 2vw;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    word-break: keep-all;
+}
+
+
+/* 購物須知 */
+
+div#P3OutIntroductionTitle {
+    position: absolute;
+    top: 42%;
+    left: 2%;
+}
+
+#P3OutIntroductionTitle>img {
+    width: 7vw;
+}
+
+div#P3OutIntroductionBox {
+    width: 28vw;
+    height: 15vw;
+    position: absolute;
+    top: 49%;
+    left: 2%;
+    font-size: 1.3vw;
+    line-height: 2.5vw;
+    letter-spacing: 0.5px;
+    word-spacing: 10px;
+}
+
+
+/* 購物須知內容 */
+
+
+/* 商品介紹 */
+
+div#pdIntroduction {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    padding-right: 1vw;
+    overflow-x: hidden;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+
+/* 商品規格 */
+
+div#pdFormat {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    padding-right: 1vw;
+    overflow: auto;
+    transition: opacity 0.5s;
+    opacity: 0;
+    right: 50vw;
+}
+
+div#buyKnow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    padding-right: 1vw;
+    overflow: auto;
+    transition: opacity 0.5s;
+    opacity: 0;
+    right: 50vw;
+}
+
+
+/* 右邊商品價格 */
+
+#P3OutSetPdRightBox {
+    width: 28%;
+    height: 62%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-60%);
+}
+
+
+/* 庫存 */
+
+div#PdStockBox {
+    position: absolute;
+    right: 9%;
+    bottom: 30%;
+}
+
+span#P3OutBoxSetPdStock {
+    font-size: 2vw;
+}
+
+span#P3OutBoxPdStock {
+    font-size: 2vw;
+}
+
+
+/* 貨運方式 */
+
+ul#P3OutPdFreight {
+    padding-left: 2vw;
+    margin: 1vw 0 0 0;
+    font-size: 1.2vw;
+    list-style-type: none;
+}
+
+
+/* 三角形 */
+
+ul#P3OutPdFreight>span {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1vw 0.5vw 0 0.5vw;
+    border-color: #ffffff transparent transparent transparent;
+    position: relative;
+    top: 1.2vw;
+    left: 5vw;
+}
+
+
+/* 加入收藏 */
+
+span#P3OutPdLike {
+    position: relative;
+    font-size: 2vw;
+    left: 1vw;
+}
+
+
+/* 收藏星星 */
+
+#starBox {
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    position: relative;
+    top: 0.2vw;
+    left: 2vw;
+}
+
+img.P3OutPdLike {
+    position: absolute;
+    width: 100%;
+}
+
+img.P3OutPdLikeShow {
+    position: absolute;
+    width: 100%;
+}
+
+
+/* 原價 */
+
+.priceP {
+    font-size: 1.5vw;
+    margin: 2vw 0 0 1.5vw;
+}
+
+#P3OutBoxPdPrice {
+    margin-left: 0.5vw;
+    text-decoration: line-through;
+}
+
+
+/* 特價 */
+
+.priceP2 {
+    margin: 0 0 0 1.5vw;
+    font-size: 1.5vw;
+}
+
+span#P3OutBoxPdSalePrice {
+    font-size: 2.5vw;
+    margin-left: 1vw;
+    color: #00FFBA;
+}
+
+span#P3OutBoxPdVipPrice {
+    font-size: 2.5vw;
+    margin-left: 1.7vw;
+    color: #00FFBA;
+}
+
+
+/* 線 */
+
+#P3OutSetPdRightBox>hr {
+    background: white;
+    width: 80%;
+    position: relative;
+    right: 6%;
+}
+
+
+/* 加購 */
+
+#P3OutPdAdd {
+    margin: 3vw 1vw 0 0;
+    display: flex;
+}
+
+#P3OutPdAddCk {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+#P3OutPdAdd>label {
+    width: 75%;
+    position: relative;
+    left: 0.5vw;
+    top: -0.3vw;
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+
+/* 加購圖 */
+
+div#addBuy {
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    left: 2%;
+}
+
+.addBuyBorder {
+    /* border: 2px solid black;
+    border-radius: 5px; */
+    filter: drop-shadow(2px 4px 6px black);
+    transition: all 0.3s;
+}
+
+.addBuyImgBox {
+    padding: 0.2vw;
+    width: 5vw;
+    height: 6vw;
+    margin: 0 0.5vw;
+}
+
+.addBuyImgBox>img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    object-fit: contain;
+}
+
+input[name='PdOther'] {
+    display: none;
+}
+
+
+/* 中間 */
+
+
+/* 商品 */
+
+div#P3OutPd {
+    width: 36vw;
+    height: 36vw;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#P3OutPd>img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    object-fit: contain;
+}
+
+
+/* 其他照片 */
+
+div#P3OutPdOtherImg {
+    position: absolute;
+    width: 36%;
+    height: 13%;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.P3OutPdOtherImgBox {
+    height: 100%;
+    width: 100%;
+    margin: 0 2.5%;
+}
+
+.P3OutPdOtherImgBox>img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* 購買數量 */
+
+#P3OutPdCountBox {
+    position: absolute;
+    right: 6%;
+    bottom: 5%;
+    font-size: 1.5vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 16%;
+}
+
+#P3OutPdCountBox>label {
+    margin: 0;
+    position: absolute;
+}
+
+
+/* 選單 */
+
+select {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    background: url("../../img/index/set/outBox/arrow.png");
+    background-repeat: no-repeat;
+    background-position-x: 11.5vw;
+    background-position-y: 0.5vw;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 1.2vw;
+    width: 13vw;
+    padding: 0.1vw 0.5vw;
+    margin: 0 0 0 1vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    outline: none;
+    background: none;
+    background-color: white;
+}
+
+
+/* 購物按鈕 */
+
+.btn.btn-info {
+    background-image: url("../../img/index/set/outBox/加入購物車.png");
+    background-repeat: no-repeat;
+    background-color: #4DD5FB;
+    box-shadow: 5px 5px 5px #00000080;
+}
+
+.btn.btn-danger {
+    background-image: url("../../img/index/set/outBox/立即結帳.png");
+    background-repeat: no-repeat;
+    background-color: #FF8B9E;
+    box-shadow: 5px 5px 5px #00000080;
+}
+
+#joinCar {
+    width: 12vw;
+    height: 3vw;
+    position: absolute;
+    bottom: 0;
+    left: -3vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+}
+
+#buyNow {
+    width: 12vw;
+    height: 3vw;
+    position: absolute;
+    bottom: 0;
+    left: 11vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+}

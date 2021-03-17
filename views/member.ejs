@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if(data) { %>
+        <title>會員專區 - Universe</title>
+        <% }else{ %>
+        <title>我的收藏 - Universe</title>
+    <% }; %>
+
+    <%- include('share/link'); -%>
+
+        <!-- member用 -->
+        <link rel="stylesheet" href="/css/member/memberNpage1.css">
+        <link rel="stylesheet" href="/css/member/page2.css">
+        <link rel="stylesheet" href="/css/member/page3.css">
+        <link rel="stylesheet" href="/css/member/page4.css">
+        <!-- https://animate.style/ -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+
+
+</head>
+
+<body>
+
+    <%- include('share/header'); -%>
+        <memberBody>
+            <div id="memberPage">
+                <img id="memberPageBg" src="/img/member/會員頁BG.png" alt="">
+                <%- include('share/logo'); -%>
+
+                    <div id="pageBoxSet">
+                        <% if(data) { %>
+                            <img id="mberPage" class="titleSet curHover" src="/img/member/會員資料.png" alt="">
+                            <img id="oderPage" class="titleSet curHover" src="/img/member/我的訂單.png" alt="">
+                            <% }; %>
+                                <img id="favorPage" class="titleSet curHover" src="/img/member/我的收藏.png" alt="">
+                                <% if(data) { %>
+                                    <img id="discPage" class="titleSet curHover" src="/img/member/我的優惠券.png" alt="">
+                                    <% }; %>
+                                        <% if(data) { %>
+                                            <div id="page1" class="page">
+                                                <img class="pageBg" src="/img/member/會員表格BG.png" alt="">
+
+                                                <div id="memberPicSet">
+                                                    <div id="pictureBox">
+                                                        <img class="pictureBoxBg" src="/img/member/page1/set/大頭貼框.png" alt="">
+                                                        <img id="picture" src="" alt="">
+                                                    </div>
+                                                    <select name="" id="uploadBox">
+                                                        <option value="re" disabled>選擇大頭貼</option>
+                                                        <option value="陽光男孩">陽光男孩</option>
+                                                        <option value="陽光女孩">陽光女孩</option>
+                                                        <option value="綜藝咖男孩">綜藝咖男孩</option>
+                                                        <option value="綜藝咖女孩">綜藝咖女孩</option>
+                                                    </select>
+                                                    <div id="memberNameBox">
+                                                        <span class="spanP whiteColor">ID:<span id="memberID">1234567890</span></span>
+                                                        <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div id="memberData">
+                                                    <div class="data data1">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">為必填資料
+                                                    </div>
+                                                    <div class="data">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">會員名字</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP" type="text" name="" id="userName" value="" placeholder="ex: 請填寫你/妳的名字">
+                                                    </div>
+                                                    <div class="data">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">設定密碼</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP" type="password" name="" id="pswInput" readonly="readonly" value="">
+                                                        <input id="pswInputButton" type="button" class="btn btn-danger curHover" value="修改密碼"></input>
+                                                    </div>
+                                                    <div class="data data2">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">E-Mail 信箱</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP curHover" type="email" name="" id="memberEmail" value="">
+                                                    </div>
+                                                    <div class="data">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">生日</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP curHover" type="date" name="" id="memberBirthday">
+                                                    </div>
+                                                    <div class="data">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">手機號碼</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP curHover" type="tel" name="" id="memberPhone" value="" required maxlength="10" pattern="[0-9]{10}" placeholder="ex: 0900123456">
+                                                    </div>
+                                                    <div class="data">
+                                                        <img class="star" src="/img/member/page1/set/star.png" alt="">
+                                                        <div class="dataTitleBox">
+                                                            <span class="spanP whiteColor">通訊地址</span>
+                                                            <img class="dataTitleBg" src="/img/member/page1/set/會員標籤BG.png" alt="">
+                                                        </div>
+                                                        <input class="dataP curHover" type="text" name="" id="memberAddress" value="" placeholder="ex: 請填寫詳細地址">
+                                                    </div>
+                                                    <div class="data data3">
+                                                        <label for="dataOk">
+                                                            <input id="dataOk" type="button" value="">
+                                                            <img class="dataOkImg curHover" src="/img/member/page1/set/儲存.png" alt="">
+                                                        </label>
+                                                        <label for="dataCl">
+                                                            <input id="dataCl" type="button" value="">
+                                                            <img class="dataClImg curHover" src="/img/member/page1/set/取消.png" alt="">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <img id="memberIcon" src="/img/member/page1/set/我的檔案.png" alt="">
+                                                <div id="pswChangeBoxBg">
+                                                    <div id="pswChangeBox" class="msgBox">
+                                                        <input class="pswChange curHover" type="password" name="" id="" placeholder="輸入舊密碼">
+                                                        <input class="pswChange curHover" type="password" name="" id="" placeholder="輸入新密碼">
+                                                        <input class="pswChange curHover" type="password" name="" id="" placeholder="確認新密碼">
+                                                        <div>
+                                                            <input id="pswChangeOk" class="btn btn-danger curHover" type="submit" value="確定">
+                                                            <input id="pswChangeCl" class="btn btn-primary curHover" type="button" value="取消">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="msgBox size1">
+                                                    <img class="showOkImg" src="/img/member/OK.png" alt="">更新完成
+                                                    <button id="msgBoxCloseBtn" class="btn btn-dark">&#215</button>
+                                                </div>
+                                            </div>
+
+                                            <div id="page2" class="page">
+                                                <img class="pageBg" src="/img/member/會員表格BG.png" alt="">
+                                                <div id="page2BoxSet">
+                                                    <% for(let i=0; i<userOrder.length ;i++){ %>
+                                                        <div class="rowBox">
+                                                            <div class="ltBox">
+                                                                <img class="page2Pd Img_<%= userOrder[i].runwater %>" src="" alt="">
+                                                            </div>
+                                                            <div class="mdBox">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td class="td1">訂單編號</td>
+                                                                        <td class="td2">品項</td>
+                                                                        <td class="td3">付款方式</td>
+                                                                        <td class="td4">取貨方式</td>
+                                                                        <td class="td5">付款金額</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="td1">
+                                                                            <%= userOrder[i].runwater %>
+                                                                        </td>
+                                                                        <td class="td2">
+                                                                            <%= userOrder[i].count_pd %>
+                                                                        </td>
+                                                                        <td class="td3">
+                                                                            <%= userOrder[i].method %>
+                                                                        </td>
+                                                                        <td class="td4">
+                                                                            <%= userOrder[i].transport %>
+                                                                        </td>
+                                                                        <td class="td5">NT$
+                                                                            <%= userOrder[i].totalprice %>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table>
+                                                                    <tr>
+                                                                        <td class="w25">
+                                                                            <span class="state1">●</span>
+                                                                        </td>
+                                                                        <td class="w25">
+                                                                            <span class="state2">●</span>
+                                                                            <hr class="state1Hr state2">
+                                                                        </td>
+                                                                        <td class="w25">
+                                                                            <span class="state3">●</span>
+                                                                            <hr class="state1Hr state3">
+                                                                        </td>
+                                                                        <td class="w25">
+                                                                            <span class="state4">●</span>
+                                                                            <hr class="state1Hr state4">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="w25">訂單成立</td>
+                                                                        <td class="w25">出貨中</td>
+                                                                        <td class="w25">已到貨</td>
+                                                                        <td class="w25">完成訂單</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="rtBox">
+                                                                <img class="page2SetRImg edit_order click_<%= userOrder[i].runwater %>" src="/img/member/page2/修改訂單.png" alt="">修改訂單
+                                                                <img class="page2SetRImg order_pd click_pd_<%= userOrder[i].runwater %>" src="/img/member/page2/商品資訊.png" alt="">商品資訊
+                                                                <img class="page2SetRImg cancel_<%= userOrder[i].runwater %>" src="/img/member/page2/取消訂單.png" alt="">取消訂單
+                                                            </div>
+                                                        </div>
+                                                        <% }; %>
+                                                </div>
+                                                <div class="editOderBox animate__animated animate__jackInTheBox">
+                                                    <img class="editOderBoxBg" src="/img/shopping/購物車頁面/BG.png" alt="">
+                                                    <img class="editicon" src="/img/member/page2/修改訂單Icon.png" alt="">
+                                                    <img class="editCancel" src="/img/member/page2/取消.png" alt="">
+                                                    <img class="editOk" src="/img/member/page2/確認修改.png" alt="">
+                                                    <div class="box editPdMsgBox">
+                                                        <table class="editPdMsg">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td class="titleBg msgW1">商品名稱</td>
+                                                                    <td class="titleBg msgW2">數量</td>
+                                                                    <td class="titleBg msgW2">單價</td>
+                                                                    <td class="titleBg msgW2">小計</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!-- <tr>
+                                                                    <td class="msgW1">【PS4】PS4 Pro 專業版 主機 極致黑 1TB 雙手把同捆組</td>
+                                                                    <td class="msgW2">1</td>
+                                                                    <td class="msgW2">NT$12,980</td>
+                                                                    <td class="msgW2">NT$12,980</td>
+                                                                </tr> -->
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="box editOderMsgBox">
+                                                        <table class="editMsg">
+                                                            <tr>
+                                                                <td class="titleBg bgH" colspan="4">收件人資料</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="editMsgTitle">地址</td>
+                                                                <td colspan="3">
+                                                                    <input class="oderAddress" type="text" name="" id="" placeholder="收件地址">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="editMsgTitle">收件人</td>
+                                                                <td colspan="3">
+                                                                    <input class="oderName" type="text" name="" id="" placeholder="訂購人姓名">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="editMsgTitle">手機</td>
+                                                                <td colspan="3">
+                                                                    <input class="orderPhone" type="text" maxlength="10" name="" id="" placeholder="訂購人手機">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="editMsgTitle">備註</td>
+                                                                <td colspan="3">
+                                                                    <textarea class="orderRemark" name="" id="order_remark" cols="60" rows="2" placeholder="如果有特別的注意事項也請告訴我們"></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="editMsgTitle">發票</td>
+                                                                <td colspan="3">
+                                                                    <input class="invoice" type="radio" name="invoice" id="invoice1" checked><label for="invoice1">捐贈發票</label>
+                                                                    <input class="invoice" type="radio" name="invoice" id="invoice2"><label for="invoice2">電子發票</label>
+                                                                    <input class="invoice" type="radio" name="invoice" id="invoice3"><label for="invoice3">三聯式發票</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2"><span>運送方式: <span class="transport"></span></span>
+                                                                </td>
+                                                                <td colspan="2"><span>付款方式: <span class="method"></span></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <div class="orderPrice">
+                                                            <p>小計金額: <span class="small_price"></span></p>
+                                                            <p class="transport d_t"></p>
+                                                            <hr>
+                                                            <p>總金額: <span class="totalprice"></span></p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="pdMsgBigBox">
+                                                    <!-- <div class="pdMsgBox">
+                                    <img class="pdMsgBoxBg" src="/img/member/page2/商品資訊框2.png" alt="">
+                                    <img class="pdMsgImg" src="/img/shopping/商品/game/ps4/PS4game_02.jpg" alt="">
+                                </div>
+                                <div class="pdMsgBox">
+                                    <img class="pdMsgBoxBg" src="/img/member/page2/商品資訊框2.png" alt="">
+                                    <img class="pdMsgImg" src="/img/shopping/商品/game/ps4/PS4game_02.jpg" alt="">
+                                </div>
+                                <div class="pdMsgBox">
+                                    <img class="pdMsgBoxBg" src="/img/member/page2/商品資訊框2.png" alt="">
+                                    <img class="pdMsgImg" src="/img/shopping/商品/game/ps4/PS4game_02.jpg" alt="">
+                                </div> -->
+
+                                                </div>
+                                            </div>
+                                            <% }; %>
+                                                <div id="page3" class="page">
+                                                    <% if(data) { %>
+                                                        <div id="clear_favor" class="clear_favor" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                        <div class="clear_favor_msg">你不要的收藏都給我!!</div>
+
+                                                        <% }; %>
+
+                                                            <img class="pageBg" src="/img/member/會員表格BG.png" alt="">
+                                                            <img id="page3Bg2" class="pageBg" src="/img/member/page3/我的收藏.BG(疊在主BG上).png" alt="">
+                                                            <div id="carouselExampleIndicators" class="selectTypeBox carousel" data-ride="carousel">
+                                                                <img id="selectTypeL" class="selectTypeLR" href="#carouselExampleIndicators" role="button" data-slide="prev" src="/img/member/page3/navbar左箭頭.png" alt="">
+                                                                <img id="selectTypeBg" src="/img/member/page3/navbar背景.png" alt="">
+                                                                <img id="selectTypeR" class="selectTypeLR" href="#carouselExampleIndicators" role="button" data-slide="next" src="/img/member/page3/navbar右箭頭.png" alt="">
+                                                                <div>
+                                                                    <span id="selectTypePS4" class="selectTypeP carousel-item active">PS4/PSV</span>
+                                                                    <span id="selectTypeSWITCH" class="selectTypeP carousel-item">SWITCH</span>
+                                                                    <span id="selectTypeXBOX" class="selectTypeP carousel-item">XBOX</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="mberPage3Ps4" class="mberPage3pdSetPosition">
+                                                                <img id="mberPage3Ps4P3L" class="mberPage3P3L curHover" src="/img/member/page3/商品左箭頭.png" alt="">
+                                                                <img id="mberPage3Ps4P3R" class="mberPage3P3R curHover" src="/img/member/page3/商品右箭頭.png" alt="">
+                                                                <div class="mberPage3allPdBox">
+                                                                    <div class="mberPage3pdSet mberPage3pdPs4 Img">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[1].length ;i++){ %>
+                                                                                <!-- 商品1圖 -->
+                                                                                <label for="ps4BySelect<%= i %>" class="mberPage3pdThreeEqual favor_<%= userFavor[1][i].productID %>">
+                                                                            <img id="favor_<%= userFavor[1][i].productID %>" class="mberPage3product curHover" src="/img/shopping/商品/<%= userFavor[1][i].style %>/<%= userFavor[1][i].type %>/<%= userFavor[1][i].images %>.png" alt="" draggable="true" ondragstart="drag(event)">
+                                                                        </label>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                    <div class="mberPage3pdPs4 Body">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[1].length ;i++){ %>
+                                                                                <!-- 商品1文字 -->
+                                                                                <div class="mberPage3PdMsgBox favor_<%= userFavor[1][i].productID %>">
+                                                                                    <input type="radio" name="ps4" class="notShowInput" id="ps4BySelect<%= i %>">
+                                                                                    <span class="Page3PdName">商品名稱: <span><%= userFavor[1][i].name %></span></span>
+                                                                                    <div class="Page3PdMsgNPrice">
+                                                                                        <div class="Page3PdMsg">
+                                                                                            <span><%= userFavor[1][i].content %></span>
+                                                                                        </div>
+                                                                                        <div class="Page3PdPrice">
+                                                                                            <% if(userFavor[1][i].sales!=0){%>
+                                                                                                <p>原價<span class="XPrice">NT$<%= userFavor[1][i].price +1000 %></span></p>
+                                                                                                <p>一般價<span class="realPrice">NT$<%= userFavor[1][i].price %></span></p>
+                                                                                                <p>&nbsp;&nbsp;特價<span class="VIPPrice">NT$<%= (parseInt(userFavor[1][i].price)*((100-userFavor[1][i].sales) /100)).toFixed(0) %></span></p>
+                                                                                                <% }else{%>
+                                                                                                    <br>
+                                                                                                    <p class="XPrice">原價<span id="P3OutBoxPdPrice">NT$<%= userFavor[1][i].price + 1000 %></span></p>
+                                                                                                    <p class="realPrice">一般價<span id="P3OutBoxPdSalePrice">NT$<%= userFavor[1][i].price %></span></p>
+                                                                                                    <%}%>
+                                                                                                        <a href="/pdMsg?id=<%= userFavor[1][i].productID %>"><input type="button" class="btn btn-success" value="商品資訊"></a>
+                                                                                                        <input type="button" class="btn btn-info" value="加入購物車">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="mberPage3Switch" class="mberPage3pdSetPosition">
+                                                                <img id="mberPage3SwitchP3L" class="mberPage3P3L curHover" src="/img/member/page3/商品左箭頭.png" alt="">
+                                                                <img id="mberPage3SwitchP3R" class="mberPage3P3R curHover" src="/img/member/page3/商品右箭頭.png" alt="">
+                                                                <div class="mberPage3allPdBox">
+                                                                    <div class="mberPage3pdSet mberPage3pdSwitch Img">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[0].length ;i++){ %>
+                                                                                <!-- 商品1圖 -->
+                                                                                <label for="switchBySelect<%= i %>" class="mberPage3pdThreeEqual favor_<%= userFavor[0][i].productID %>">
+                                                                            <img id="favor_<%= userFavor[0][i].productID %>" class="mberPage3product curHover" src="/img/shopping/商品/<%= userFavor[0][i].style %>/<%= userFavor[0][i].type %>/<%= userFavor[0][i].images %>.png" alt="" draggable="true" ondragstart="drag(event)">
+                                                                        </label>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                    <div class="mberPage3pdSwitch Body">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[0].length ;i++){ %>
+                                                                                <!-- 商品1文字 -->
+                                                                                <div class="mberPage3PdMsgBox favor_<%= userFavor[0][i].productID %>">
+                                                                                    <input type="radio" name="switch" class="notShowInput" id="switchBySelect<%= i %>">
+                                                                                    <span class="Page3PdName">商品名稱: <span><%= userFavor[0][i].name %></span></span>
+                                                                                    <div class="Page3PdMsgNPrice">
+                                                                                        <div class="Page3PdMsg">
+                                                                                            <span><%= userFavor[0][i].content %></span>
+                                                                                        </div>
+                                                                                        <div class="Page3PdPrice">
+                                                                                            <% if(userFavor[0][i].sales!=0){%>
+                                                                                                <p>原價<span class="XPrice">NT$<%= userFavor[0][i].price +1000 %></span></p>
+                                                                                                <p>一般價<span class="realPrice">NT$<%= userFavor[0][i].price %></span></p>
+                                                                                                <p>&nbsp;&nbsp;特價<span class="VIPPrice">NT$<%= (parseInt(userFavor[0][i].price)*((100-userFavor[0][i].sales) /100)).toFixed(0) %></span></p>
+                                                                                                <% }else{%>
+                                                                                                    <br>
+                                                                                                    <p class="XPrice">原價<span id="P3OutBoxPdPrice">NT$<%= userFavor[0][i].price + 1000 %></span></p>
+                                                                                                    <p class="realPrice">一般價<span id="P3OutBoxPdSalePrice">NT$<%= userFavor[0][i].price %></span></p>
+                                                                                                    <%}%>
+                                                                                                        <a href="/pdMsg?id=<%= userFavor[0][i].productID %>"><input type="button" class="btn btn-success" value="商品資訊"></a>
+                                                                                                        <input type="button" class="btn btn-info" value="加入購物車">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="mberPage3Xbox" class="mberPage3pdSetPosition">
+                                                                <img id="mberPage3XboxP3L" class="mberPage3P3L curHover" src="/img/member/page3/商品左箭頭.png" alt="">
+                                                                <img id="mberPage3XboxP3R" class="mberPage3P3R curHover" src="/img/member/page3/商品右箭頭.png" alt="">
+                                                                <div class="mberPage3allPdBox">
+                                                                    <div class="mberPage3pdSet mberPage3pdXbox Img">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[2].length ;i++){ %>
+                                                                                <!-- 商品1圖 -->
+                                                                                <label for="xboxBySelect<%= i %>" class="mberPage3pdThreeEqual favor_<%= userFavor[2][i].productID %>">
+                                                                            <img id="favor_<%= userFavor[2][i].productID %>" class="mberPage3product curHover" src="/img/shopping/商品/<%= userFavor[2][i].style %>/<%= userFavor[2][i].type %>/<%= userFavor[2][i].images %>.png" alt="" draggable="true" ondragstart="drag(event)">
+                                                                        </label>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                    <div class="mberPage3pdXbox Body">
+                                                                        <% if(data) { %>
+                                                                            <% for(let i=0; i<userFavor[2].length ;i++){ %>
+                                                                                <!-- 商品1文字 -->
+                                                                                <div class="mberPage3PdMsgBox favor_<%= userFavor[2][i].productID %>">
+                                                                                    <input type="radio" name="xbox" class="notShowInput" id="xboxBySelect<%= i %>">
+                                                                                    <span class="Page3PdName">商品名稱: <span><%= userFavor[2][i].name %></span></span>
+                                                                                    <div class="Page3PdMsgNPrice">
+                                                                                        <div class="Page3PdMsg">
+                                                                                            <span><%= userFavor[2][i].content %></span>
+                                                                                        </div>
+                                                                                        <div class="Page3PdPrice">
+                                                                                            <% if(userFavor[2][i].sales!=0){%>
+                                                                                                <p>原價<span class="XPrice">NT$<%= userFavor[2][i].price +1000 %></span></p>
+                                                                                                <p>一般價<span class="realPrice">NT$<%= userFavor[2][i].price %></span></p>
+                                                                                                <p>&nbsp;&nbsp;特價<span class="VIPPrice">NT$<%= (parseInt(userFavor[2][i].price)*((100-userFavor[2][i].sales) /100)).toFixed(0) %></span></p>
+                                                                                                <% }else{%>
+                                                                                                    <br>
+                                                                                                    <p class="XPrice">原價<span id="P3OutBoxPdPrice">NT$<%= userFavor[2][i].price + 1000 %></span></p>
+                                                                                                    <p class="realPrice">一般價<span id="P3OutBoxPdSalePrice">NT$<%= userFavor[2][i].price %></span></p>
+                                                                                                    <%}%>
+                                                                                                        <a href="/pdMsg?id=<%= userFavor[2][i].productID %>"><input type="button" class="btn btn-success" value="商品資訊"></a>
+                                                                                                        <input type="button" class="btn btn-info" value="加入購物車">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <% } %>
+                                                                                    <% } %>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                </div>
+                                                <% if(data) { %>
+                                                    <div id="page4" class="page">
+                                                        <img class="pageBg" src="/img/member/會員表格BG.png" alt="">
+                                                        <div id="page4MdBox">
+                                                            <div id="page4BoxTitleBox">
+                                                                <img src="/img/member/page4/中方塊.png" alt="">
+                                                                <ul id="page4BoxTitle">
+                                                                    <li id="clickNotUse">可使用</li>
+                                                                    <li id="clickUse">已使用</li>
+                                                                    <li id="clickExp">過期</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="discountBox" id="notUse">
+                                                                <!-- <div class="dontForget">
+                                                                    別忘了每天都可以領優惠券!
+                                                                </div> -->
+                                                                <% for( let i = 0 ; i < userTicket[0].switch_discount; i++ ) {%>
+                                                                    <!-- switch優惠券 -->
+                                                                    <div class="disCBox">
+                                                                        <div class="disCImgPBox switchBoderRed">
+                                                                            <div class="disCImg">
+                                                                                <img src="/img/member/page4/ns.png" alt="">
+                                                                            </div>
+                                                                            <div class="disCP switchBgRed">SWITCH專區</div>
+                                                                        </div>
+                                                                        <div class="discountS switchBoderRed">
+                                                                            <div>每日限量優惠券</div>
+                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                            <div>有效期限 領取當日23:59</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <% for( let i = 0 ; i < userTicket[0].ps4_discount; i++ ) {%>
+                                                                            <!-- ps4優惠券 -->
+                                                                            <div class="disCBox">
+                                                                                <div class="disCImgPBox ps4BoderBlue">
+                                                                                    <div class="disCImg">
+                                                                                        <img src="/img/member/page4/ps4.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="disCP ps4BgBlue">PS4專區</div>
+                                                                                </div>
+                                                                                <div class="discountS ps4BoderBlue">
+                                                                                    <div>每日限量優惠券</div>
+                                                                                    <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                    <div>有效期限 領取當日23:59</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <% } %>
+                                                                                <% for( let i = 0 ; i < userTicket[0].xbox_discount; i++ ) {%>
+                                                                                    <!-- xbox優惠券 -->
+                                                                                    <div class="disCBox">
+                                                                                        <div class="disCImgPBox xboxBoderGreen">
+                                                                                            <div class="disCImg">
+                                                                                                <img src="/img/member/page4/xbox.png" alt="">
+                                                                                            </div>
+                                                                                            <div class="disCP xboxBgGreen">XBOX專區</div>
+                                                                                        </div>
+                                                                                        <div class="discountS xboxBoderGreen">
+                                                                                            <div>每日限量優惠券</div>
+                                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                            <div>有效期限 領取當日23:59</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <% } %>
+                                                            </div>
+                                                            <div class="discountBox" id="use">
+                                                                <% for( let i = 0 ; i < userTicket[0].use_switch; i++ ) {%>
+                                                                    <!-- switch優惠券 -->
+                                                                    <div class="disCBox">
+                                                                        <div class="disCImgPBox switchBoderRed">
+                                                                            <div class="disCImg">
+                                                                                <img src="/img/member/page4/ns.png" alt="">
+                                                                            </div>
+                                                                            <div class="disCP switchBgRed">SWITCH專區</div>
+                                                                        </div>
+                                                                        <div class="discountS switchBoderRed">
+                                                                            <div>每日限量優惠券</div>
+                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                            <div>有效期限 領取當日23:59</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <% for( let i = 0 ; i < userTicket[0].use_ps4; i++ ) {%>
+                                                                            <!-- ps4優惠券 -->
+                                                                            <div class="disCBox">
+                                                                                <div class="disCImgPBox ps4BoderBlue">
+                                                                                    <div class="disCImg">
+                                                                                        <img src="/img/member/page4/ps4.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="disCP ps4BgBlue">PS4專區</div>
+                                                                                </div>
+                                                                                <div class="discountS ps4BoderBlue">
+                                                                                    <div>每日限量優惠券</div>
+                                                                                    <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                    <div>有效期限 領取當日23:59</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <% } %>
+                                                                                <% for( let i = 0 ; i < userTicket[0].use_xbox; i++ ) {%>
+                                                                                    <!-- xbox優惠券 -->
+                                                                                    <div class="disCBox">
+                                                                                        <div class="disCImgPBox xboxBoderGreen">
+                                                                                            <div class="disCImg">
+                                                                                                <img src="/img/member/page4/xbox.png" alt="">
+                                                                                            </div>
+                                                                                            <div class="disCP xboxBgGreen">XBOX專區</div>
+                                                                                        </div>
+                                                                                        <div class="discountS xboxBoderGreen">
+                                                                                            <div>每日限量優惠券</div>
+                                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                            <div>有效期限 領取當日23:59</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <% } %>
+
+                                                            </div>
+                                                            <div class="discountBox" id="exp">
+                                                                <% for( let i = 0 ; i < userTicket[0].exp_switch; i++ ) {%>
+                                                                    <!-- switch優惠券 -->
+                                                                    <div class="disCBox">
+                                                                        <div class="disCImgPBox switchBoderRed">
+                                                                            <div class="disCImg">
+                                                                                <img src="/img/member/page4/ns.png" alt="">
+                                                                            </div>
+                                                                            <div class="disCP switchBgRed">SWITCH專區</div>
+                                                                        </div>
+                                                                        <div class="discountS switchBoderRed">
+                                                                            <div>每日限量優惠券</div>
+                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                            <div>有效期限 領取當日23:59</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <% for( let i = 0 ; i < userTicket[0].exp_ps4; i++ ) {%>
+                                                                            <!-- ps4優惠券 -->
+                                                                            <div class="disCBox">
+                                                                                <div class="disCImgPBox ps4BoderBlue">
+                                                                                    <div class="disCImg">
+                                                                                        <img src="/img/member/page4/ps4.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="disCP ps4BgBlue">PS4專區</div>
+                                                                                </div>
+                                                                                <div class="discountS ps4BoderBlue">
+                                                                                    <div>每日限量優惠券</div>
+                                                                                    <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                    <div>有效期限 領取當日23:59</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <% } %>
+                                                                                <% for( let i = 0 ; i < userTicket[0].exp_xbox; i++ ) {%>
+                                                                                    <!-- xbox優惠券 -->
+                                                                                    <div class="disCBox">
+                                                                                        <div class="disCImgPBox xboxBoderGreen">
+                                                                                            <div class="disCImg">
+                                                                                                <img src="/img/member/page4/xbox.png" alt="">
+                                                                                            </div>
+                                                                                            <div class="disCP xboxBgGreen">XBOX專區</div>
+                                                                                        </div>
+                                                                                        <div class="discountS xboxBoderGreen">
+                                                                                            <div>每日限量優惠券</div>
+                                                                                            <div class="disCPrice">折 100元 低消$2000</div>
+                                                                                            <div>有效期限 領取當日23:59</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <% } %>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <% }; %>
+                    </div>
+            </div>
+
+
+        </memberBody>
+        <script src="/js/share/share.js"></script>
+        <script src="/js/member/member.js"></script>
+        <script>
+            var favor_clear = [];
+
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function reset() {
+                $("#clear_favor").css({
+                    "background-image": 'url("/img/member/page3/kirby1.png")'
+                })
+            }
+
+
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                $("." + data).remove();
+                // kirby 動圖
+                // $("#clear_favor").clearQueue();
+                $("#clear_favor").stop();
+                $("#clear_favor").css({
+                    "background-image": 'url("/img/member/page3/kirby2.gif")'
+                }).delay(1000).queue(function(next) {
+                    $("#clear_favor").css({
+                        "background-image": 'url("/img/member/page3/kirby1.png")'
+                    });
+                    next();
+                });
+                // kirby 動圖
+                $("#" + data).css("transform", "translate(-50%, -50%)");
+                $("#" + data).animate({
+                    top: "50%",
+                    left: "65%",
+                    opacity: "0"
+                }, 700).queue(function() {
+                    $("#" + data).remove();
+                });
+
+                var data_id = data.split("_");
+
+                $.get("/member/collect", function(e) {
+                    favor_clear = JSON.parse(e);
+                    // console.log(favor_clear[0]);
+                    favor_clear[0].productID = data_id[1];
+                    $.ajax({
+                        type: "delete",
+                        url: "/member/collect",
+                        data: favor_clear[0]
+                    })
+                })
+                page3();
+            }
+        </script>
+        <script>
+            $(function() {
+
+                // page1
+                if ("<%= data %>") {
+                    var mberList = [];
+
+                    $.get("/member/edit", function(e) {
+                        mberList = JSON.parse(e);
+                        refreshUserData();
+                    })
+
+                    function refreshUserData() {
+                        // 日期補0
+                        if (mberList[0].birthday != null) {
+                            var d = new Date(mberList[0].birthday);
+                            var yy = d.getFullYear();
+                            var mm = (d.getMonth() + 1 < 10 ? '0' : '') + (d.getMonth() + 1);
+                            var dd = (d.getDate() < 10 ? '0' : '') + d.getDate();
+                            var date_value = yy + '-' + mm + '-' + dd;
+                            $("#memberBirthday").val(date_value);
+                        } else {
+                            $("#memberBirthday").val("");
+                        }
+
+                        $("#memberBirthday").val(date_value);
+                        $("#memberID").text(mberList[0].userID);
+                        $("#userName").val(mberList[0].name);
+                        $("#pswInput").val(mberList[0].password);
+                        $("#memberEmail").val(mberList[0].email);
+                        $("#memberPhone").val(mberList[0].phone);
+                        $("#memberAddress").val(mberList[0].address);
+                        if (mberList[0].picture != "") {
+                            $("#picture").attr("src", "/img/member/page1/picture/" + mberList[0].picture + ".png");
+                            $("#uploadBox").val(mberList[0].picture);
+                        } else {
+                            $("#picture").attr("src", "/img/member/page1/picture/大頭貼.png");
+                            $("#uploadBox").val("re");
+                        }
+                    }
+                    $("#uploadBox").change(function() {
+                        var changePicture = $("#uploadBox option:selected").text();
+                        $("#picture").attr("src", "/img/member/page1/picture/" + changePicture + ".png");
+                    });
+
+                    $("#dataOk").click(function() {
+                        if ($("#memberPhone").is(":valid") == true) {
+                            // $(".size1").stop();
+                            // $(".size1").css({
+                            //         "z-index": "1",
+                            //         "transform": "translate(-50%, -50%) scale(1.5)"
+                            //     }).delay(3000).queue(function(next) {
+                            //         $("#msgBoxCloseBtn").click();
+                            //         next();
+                            //     })
+                            // alert("通過");
+                            mberList[0].name = $("#userName").val();
+                            mberList[0].email = $("#memberEmail").val();
+                            mberList[0].birthday = $("#memberBirthday").val();
+                            mberList[0].phone = $("#memberPhone").val();
+                            mberList[0].address = $("#memberAddress").val();
+                            if ($("#uploadBox option:selected").text() != "選擇大頭貼") {
+                                mberList[0].picture = $("#uploadBox option:selected").text();
+                            } else mberList[0].picture = "";
+                            refreshUserData();
+
+                            $.ajax({
+                                type: "put",
+                                url: "/member/edit",
+                                data: mberList[0]
+                            })
+                            showOK();
+                        } else {
+
+                            alert("不通過");
+                            refreshUserData();
+                        }
+                    });
+
+                    $("#dataCl").click(function() {
+                        refreshUserData();
+                    });
+                }
+                // page1
+
+
+
+
+                // page2
+
+                if ("<%= data %>") {
+                    $.get("/member/order", function(e) {
+                        orderList = JSON.parse(e);
+                        var set = new Set();
+                        var result = orderList.filter(item => !set.has(item.runwater) ? set.add(item.runwater) : false);
+                        // console.log(result);
+                        var runwaterID;
+                        for (let index = 0; index < result.length; index++) {
+                            $(".Img_" + result[index].runwater).attr("src", "/img/shopping/商品/" + result[index].style + "/" + result[index].type + "/" + result[index].images + ".png");
+                            // 修改訂單
+                            $(document).on("click", ".click_" + result[index].runwater, function() {
+                                runwaterID = result[index].runwater;
+                                $(".oderAddress").val(result[index].order_address);
+                                $(".oderName").val(result[index].order_name);
+                                $(".orderPhone").val(result[index].order_phone);
+                                $(".orderRemark").val(result[index].remark);
+                                $(".transport").text(result[index].transport);
+                                $(".method").text(result[index].method);
+                                $(".can_clear").remove();
+                                var small_price = result[index].totalprice;
+                                // 運費 折扣
+                                if (result[index].transport == "郵寄寄送90元") {
+                                    $(".transport.d_t").html("運送金額: <span>NT$90</span>");
+                                    small_price = small_price - 90;
+                                }
+                                if (result[index].transport == "宅配/快遞120元") {
+                                    $(".transport.d_t").html("運送金額: <span>NT$120</span>");
+                                    small_price = small_price - 120;
+                                }
+                                if (result[index].discount != 0) {
+                                    $(".transport.d_t").before('<p class="can_clear">折扣碼: <span style="color: #FF6B6B">-NT$100</span></p>');
+                                    small_price = small_price + 100;
+                                }
+                                if (result[index].ticket != "無") {
+                                    $(".transport.d_t").before('<p class="can_clear">優惠券: <span style="color: #FF6B6B">-NT$100</span></p>');
+                                    small_price = small_price + 100;
+                                }
+                                $(".small_price").text("NT$" + small_price);
+                                $(".totalprice").text("NT$" + result[index].totalprice);
+                                // 運費 折扣
+
+                                var result_pd = orderList.filter(e => e.runwater == result[index].runwater);
+                                // console.log(result_pd);
+                                $(".editPdMsg tbody").empty();
+                                for (let index = 0; index < result_pd.length; index++) {
+                                    $(".editPdMsg tbody").append('<tr>\
+                                                                    <td class="msgW1">' + result_pd[index].name + '</td>\
+                                                                    <td class="msgW2">' + result_pd[index].quantity + '</td>\
+                                                                    <td class="msgW2">NT$' + result_pd[index].price + '</td>\
+                                                                    <td class="msgW2">NT$' + (result_pd[index].price * result_pd[index].quantity) + '</td>\
+                                                                </tr>');
+                                }
+                            }); //修改訂單
+
+
+                            // 商品資訊
+                            var turPage2 = true;
+
+                            function openPage2() {
+                                turPage2 = true;
+                            }
+
+                            $(document).on("click", ".click_pd_" + result[index].runwater, function() {
+                                var result_pd = orderList.filter(e => e.runwater == result[index].runwater);
+
+                                if (turPage2) {
+                                    var offsetTop = $(this).offset().top;
+                                    if ($(this).hasClass("showMsg")) {
+                                        $(".pdMsgBigBox").toggle();
+                                    } else {
+                                        $(".pdMsgBigBox").css({
+                                            right: "3vw",
+                                            top: offsetTop - 200,
+                                            display: "block"
+                                        })
+                                        $(".pdMsgBigBox").animate({
+                                            right: "-12vw",
+                                            top: "0",
+                                            opacity: "1"
+                                        })
+
+                                        var iCount = result_pd.length;
+                                        var delayPage2 = 1500;
+
+                                        function timer(ms) {
+                                            return new Promise(res => setTimeout(res, ms));
+                                        }
+                                        async function load() {
+                                            $(".pdMsgBigBox").empty();
+                                            for (let index = 0; index < result_pd.length; index++) {
+                                                $(".pdMsgBigBox").append('<div class="pdMsgBox">\
+                                                                        <img class="pdMsgBoxBg" src="/img/member/page2/商品資訊框2.png" alt="">\
+                                                                        <img class="pdMsgImg" src="/img/shopping/商品/' + result_pd[index].style + '/' + result_pd[index].type + '/' + result_pd[index].images + '.png" alt="">\
+                                                                     </div>');
+                                                await timer(delayPage2 / iCount);
+                                            }
+                                        }
+                                        load();
+
+                                    }
+                                    $(this).addClass("showMsg");
+                                    $(".page2SetRImg:nth-of-type(2)").not(this).removeClass("showMsg");
+                                }
+                                setTimeout(openPage2, delayPage2);
+                                turPage2 = false;
+                            }); // 商品資訊
+
+                            $(document).on("click", ".cancel_" + result[index].runwater, function() {
+                                var put_order = [];
+                                runwaterID = result[index].runwater;
+                                put_order = result.filter(e => e.runwater == runwaterID);
+                                Swal.fire({
+                                    title: '刪除: 訂單編號' + result[index].runwater + '',
+                                    text: "訂單刪除後即無法復原!",
+                                    icon: 'warning',
+                                    showCancelButton: true,
+                                    confirmButtonColor: '#d33',
+                                    cancelButtonColor: '#3085d6',
+                                    confirmButtonText: '是, 我要刪除!',
+                                    cancelButtonText: '否，我要購買!'
+                                }).then((e) => {
+                                    if (e.value) {
+                                        Swal.fire(
+                                            '刪除!',
+                                            '您的訂單已經刪除',
+                                            'success'
+                                        )
+                                        $.ajax({
+                                            type: "delete",
+                                            url: "/member/order",
+                                            data: put_order[0]
+                                        })
+                                        $("#page2BoxSet").stop();
+                                        $("#page2BoxSet").load(location.href + " #page2BoxSet>*").delay(100).queue(function(next) {
+                                            for (let index = 0; index < result.length; index++) {
+                                                $(".Img_" + result[index].runwater).attr("src", "/img/shopping/商品/" + result[index].style + "/" + result[index].type + "/" + result[index].images + ".png");
+                                            }
+                                            repage2();
+                                            next();
+                                        });
+                                    }
+                                })
+                            });
+                        }
+
+                        // 修改訂單完成
+
+                        $(document).on("click", ".editOk", function() {
+                            var put_order = [];
+                            put_order = result.filter(e => e.runwater == runwaterID);
+                            put_order[0].runwater = runwaterID;
+                            put_order[0].order_address = $(".oderAddress").val();
+                            put_order[0].order_name = $(".oderName").val();
+                            put_order[0].order_phone = $(".orderPhone").val();
+                            put_order[0].remark = $(".orderRemark").val();
+                            $.ajax({
+                                type: "put",
+                                url: "/member/order",
+                                data: put_order[0]
+                            })
+                            showOK();
+                            $(".editOderBox").toggle();
+                            show_titleSet();
+                        }); //修改OK
+                    })
+
+                }
+
+
+
+
+                // 訂單修改
+                function show_titleSet() {
+                    $(".pdMsgBigBox").css("display", "none");
+                    if ($(".editOderBox").css("display") == "block") {
+                        $(".titleSet, #page2 .pageBg, #page2BoxSet").css("opacity", "0");
+                    } else {
+                        $(".titleSet, #page2 .pageBg, #page2BoxSet").css("opacity", "1");
+                    }
+                }
+                $(document).on("click", ".page2SetRImg.edit_order", function() {
+                    $(".editOderBox").toggle();
+                    show_titleSet();
+                });
+
+                $(document).on("click", ".editCancel", function() {
+                    $(".editOderBox").toggle();
+                    show_titleSet();
+                });
+
+
+
+                // page3
+                // 本地
+                if ("<%= data %>") {
+                    page3_1();
+                    page3();
+                } else {
+
+                    var localFavor_json = [];
+
+                    $.get("/member/localFavor", function(e) {
+                        localFavor_json = JSON.parse(e);
+                        if (localStorage.getItem("localFavor") != null) {
+                            var get_localStorage = localStorage.getItem("localFavor").split(",");
+
+                            var favor_ps4 = [];
+                            var favor_switch = [];
+                            var favor_xbox = [];
+                            var i_ps4 = 0;
+                            var i_switch = 0;
+                            var i_xbox = 0;
+                            for (let index = 0; index < get_localStorage.length; index++) {
+
+                                var ps4 = localFavor_json[0].filter(e => e.productID == get_localStorage[index]);
+                                var Xswitch = localFavor_json[1].filter(e => e.productID == get_localStorage[index]);
+                                var xbox = localFavor_json[2].filter(e => e.productID == get_localStorage[index]);
+                                if (ps4.length > 0) {
+                                    favor_ps4[i_ps4] = ps4[0];
+                                    i_ps4++
+                                }
+                                if (Xswitch.length > 0) {
+                                    favor_switch[i_switch] = Xswitch[0];
+                                    i_switch++
+                                }
+                                if (xbox.length > 0) {
+                                    favor_xbox[i_xbox] = xbox[0];
+                                    i_xbox++
+                                }
+                            }
+
+                            var x3 = [favor_ps4, favor_switch, favor_xbox];
+                            var y3 = [".mberPage3pdPs4", ".mberPage3pdSwitch", ".mberPage3pdXbox"];
+                            var z3 = ["ps4", "switch", "xbox"];
+                            for (let y = 0; y < x3.length; y++) {
+
+                                for (let index = 0; index < x3[y].length; index++) {
+
+                                    $(y3[y] + ".Img").append('<label for="' + z3[y] + 'BySelect' + index + '" class="mberPage3pdThreeEqual">\
+                                                                    <img class="mberPage3product curHover" src="/img/shopping/商品/' + x3[y][index].style + '/' + x3[y][index].type + '/' + x3[y][index].images + '.png" alt="">\
+                                                                    </label>');
+                                    $(y3[y] + ".Body").append(' <div class="mberPage3PdMsgBox">\
+                                                                            <input type="radio" name="' + z3[y] + '" class="notShowInput" id="' + z3[y] + 'BySelect' + index + '">\
+                                                                            <span class="Page3PdName">商品名稱: <span>' + x3[y][index].name + '</span></span>\
+                                                                            <div class="Page3PdMsgNPrice">\
+                                                                                <div class="Page3PdMsg"><span>' + x3[y][index].content + '</span></div>\
+                                                                                <div class="Page3PdPrice">\
+                                                                                    <p>原價<span class="XPrice">NT$' + (x3[y][index].price + 100) + '</span></p>\
+                                                                                    <p>一般價<span class="realPrice">NT$' + x3[y][index].price + '</span></p>\
+                                                                                    <p>VIP價<span class="VIPPrice">NT$' + (parseInt(x3[y][index].price / 100) * 100 - 20) + '</span></p>\
+                                                                                    <a href="/pdMsg?id=' + x3[y][index].productID + '"><input type="button" class="btn btn-success" value="商品資訊"></a>\
+                                                                                    <input type="button" class="btn btn-info" value="加入購物車">\
+                                                                                </div></div></div>');
+                                }
+                            }
+                        }
+
+                        page3_1();
+                        page3();
+                    })
+                }
+
+
+            })
+        </script>
+
+        <!-- demo 用 -->
+        <script>
+            $("#memberIcon").click(function() {
+                $("#userName").val("遊戲BOY");
+                $("#memberBirthday").val("2000-08-08");
+                $("#memberPhone").val("0988168168");
+                $("#memberAddress").val("台中市南屯區公益路二段51號18樓");
+            });
+        </script>
+        <!-- DEMO -->
+        <script>
+            $("#demo_uselogin").click(function() {
+                $("#uselogin1").val("user@gmail.com");
+                $("#uselogin2").val("user66");
+                $("#uselogin3").val("test@gmail.com");
+                $("#memberData").attr("checked", true);
+                $("#userData").attr("checked", true);
+            });
+        </script>
+</body>
+
+</html>

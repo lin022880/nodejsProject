@@ -1,0 +1,398 @@
+/* P1↓ */
+
+
+/* ///////////// */
+
+
+/* ///////////// */
+
+
+/* 購物車 */
+
+
+/* 購物車背景 */
+
+.CAR {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 71%;
+    color: gray;
+    background-image: url("../../img/shopping/購物車頁面/BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* 返回鍵 */
+
+#CARreturn {
+    display: flex;
+    position: relative;
+    width: 11vh;
+    /* top: -4.1vh; */
+    left: 15%;
+    margin-top: 4vh;
+}
+
+
+/* 購物車進度條 */
+
+.CARbar {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.CARbar h6 {
+    font-size: 1.5vw;
+}
+
+.CARprogressbar {
+    display: flex;
+    position: relative;
+    top: 6%;
+    left: 8%;
+}
+
+.textNum,
+.danjia,
+.xiaoji {
+    border: none;
+    background-color: #efefef;
+    text-align: center;
+    outline: none;
+}
+
+.deleteOne {
+    border: none;
+}
+
+
+/* 刪除消除邊框 */
+
+.deleteOne:active,
+ :focus {
+    outline: none;
+}
+
+.CARbar img {
+    width: 80%;
+}
+
+
+/* ///////////// */
+
+
+/* ///////////// */
+
+
+/* 商品清單內容  */
+
+.CARitem {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    left: 9%;
+    overflow: auto;
+    height: 40vh;
+    text-align: center;
+}
+
+.CARitem table {
+    border-collapse: separate;
+    border-spacing: 0px 2vh;
+}
+
+
+/* 清單表格 */
+
+.CARitemtr td {
+    width: 20VH;
+    height: 1.0vh;
+    font-size: 1vw;
+    position: relative;
+}
+
+.CARtbody td:nth-child(n+2) {
+    background-color: #efefef;
+    margin-top: 20px;
+}
+
+
+/* 清單產品圖片 */
+
+#CARproduct {
+    position: absolute;
+    width: 53%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+/* 清單產品背景   */
+
+#CARproductbg {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+
+/* 小記 */
+
+.CARtotal {
+    position: relative;
+    text-align: center;
+    top: 47vh;
+    font-size: 2vw;
+}
+
+
+/* 刪除 */
+
+.delete {
+    width: 4vh;
+}
+
+
+/* 繼續購買和下一步按鈕 */
+
+.CARbtn1 {
+    position: relative;
+    top: 47vh;
+    text-align: center;
+}
+
+
+/* ///////////// */
+
+
+/* ///////////// */
+
+
+/* 付款方式 */
+
+.CARpayment {
+    position: relative;
+    width: 100%;
+}
+
+
+/* 付款標題 */
+
+#CARpaymenttitle {
+    position: relative;
+    top: 6vh;
+    left: 10%;
+    font-size: 3vw;
+}
+
+
+/* 付款方式選擇清單 */
+
+.CARpaymenttype {
+    position: relative;
+    top: 6vh;
+    left: 15%;
+    width: 70%;
+    list-style-type: square;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 1.5vw;
+}
+
+#abc {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.navdown {
+    background-color: gainsboro;
+}
+
+
+/* 折扣卷 */
+
+.CARdiscount {
+    position: relative;
+    display: flex;
+    top: 7vh;
+    left: 15%;
+    font-size: 1.2vw;
+}
+
+.CARdiscount input {
+    height: 4vh;
+}
+
+.CARdiscount button {
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+.CARdiscount select {
+    color: gray;
+}
+
+
+/* 付款方式按鈕 */
+
+.CARbtn2 {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+}
+
+
+/* ///////////// */
+
+
+/* ///////////// */
+
+
+/* 運送資料 */
+
+.CARtransport {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    width: 90%;
+    height: 40vh;
+    overflow-x: hidden;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.CARship {
+    display: flex;
+    position: absolute;
+    width: 60%;
+    left: 25%;
+    height: 242px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+
+/* 清單表格 */
+
+.CARshipitemtr td {
+    width: 100vh;
+    font-size: 0.1rem;
+    border: #efefef solid;
+}
+
+.CARshiptable td:nth-child(n+1) {
+    background-color: #efefef;
+}
+
+
+/* 個人資料 */
+
+.CARform {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    font-size: 1vw;
+}
+
+.CARtable2 {
+    width: 93vh;
+    text-align: left;
+}
+
+.CARtable2 thead tr:nth-child(2n-1) {
+    color: white;
+    background-color: grey;
+}
+
+.CARtable2 thead tr:nth-child(2n) {
+    height: 5vh;
+    background-color: #F2F2F2;
+}
+
+.CARtbody2 tr:nth-child(2n-1) {
+    background-color: #F2F2F2;
+}
+
+.CARtbody2 tr:nth-child(2n):not(tr:nth-child(8)) {
+    background-color: white;
+}
+
+.CARtbody2 td {
+    height: 6vh;
+}
+
+#CARother {
+    resize: none;
+    width: 600px;
+    height: 200px;
+}
+
+.CARshiptotal {
+    position: relative;
+    /* left: 60vh; */
+    text-align: right;
+}
+
+.totalred {
+    color: red;
+}
+
+.CARshiptotal span {
+    font-size: 1.5vw;
+}
+
+.line {
+    background-color: gray;
+    width: 32vh;
+    height: 1px;
+    right: 0;
+    position: absolute;
+}
+
+.CARbtn3 {
+    position: relative;
+    top: 50vh;
+    text-align: center;
+}
+
+
+/* ///////////// */
+
+
+/* ///////////// */
+
+
+/* 完成購買 */
+
+.CARfinish {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 15vh;
+}
+
+
+/* 卡比圖片 */
+
+.CARfinish img {
+    width: 15%;
+}
+
+.CARfinish h3 {
+    color: red;
+}
+
+
+/* P1↑ */

@@ -1,0 +1,100 @@
+ /* 文字 */
+ 
+ @font-face {
+     font-family: GJGP;
+     src: url("/font/GenJyuuGothic-P-Regular.ttf");
+ }
+ /* 滑鼠初始 */
+ 
+ * {
+     font-family: GJGP;
+     cursor: url("/img/cur/kirby1.png"), auto;
+ }
+ /* 滑鼠Hover */
+ 
+ .curHover:hover {
+     cursor: url("/img/cur/kirby2.png"), auto;
+ }
+ #logoLT:hover {
+     cursor: url("/img/cur/home.png"), auto;
+ }
+ /* 提示字 */   
+ /* data-toggle="tooltip" data-placement="bottom" title="回首頁" */
+ 
+ .tooltip>.tooltip-inner {
+     color: white;
+     font-size: 2vw;
+     background-color: rgb(43, 43, 43);
+ }
+ 
+ .tooltip.bs-tooltip-bottom .arrow:before {
+     border-bottom-color: rgb(43, 43, 43);
+ }
+ /* 小LOGO */
+ 
+ #logoLT {
+     width: 16vw;
+     margin-top: 20px;
+     margin-left: 40px;
+     position: relative;
+     z-index: 1;
+ }
+ /* 跑馬燈 */
+ 
+ .marquee {
+     width: 34vw;
+     height: 5.5vw;
+     position: absolute;
+     transform: translateX(-30%);
+     top: 10px;
+     left: 30%;
+ }
+ 
+ .marquee>#marqueeBox {
+     position: absolute;
+     transform: translateY(-54%);
+     top: 50%;
+     right: 0;
+     width: 28vw;
+     height: 2vw;
+     overflow: hidden;
+ }
+ 
+ #marqueeP {
+     white-space: nowrap;
+     position: relative;
+     right: -342px;
+     margin: 0;
+     color: white;
+     font-size: 1.3vw;
+ }
+ 
+ #marqueeImg {
+     position: absolute;
+     width: 100%;
+ }
+ /* 整個捲軸 */
+ 
+ ::-webkit-scrollbar {
+     width: 0.8vw;
+ }
+ /* 捲軸的軌道 */
+ 
+ ::-webkit-scrollbar-track {
+     background: #fff;
+ }
+ /*捲軸尚未滑到的軌道*/
+ 
+ ::-webkit-scrollbar-track-piece {
+     background: #fff;
+ }
+ /* 滑動的區塊 */
+ 
+ ::-webkit-scrollbar-thumb {
+     background: #aaa;
+ }
+ /* 滑鼠移到滑動的區塊上 */
+ 
+ ::-webkit-scrollbar-thumb:hover {
+     background: rgb(131, 131, 131);
+ }

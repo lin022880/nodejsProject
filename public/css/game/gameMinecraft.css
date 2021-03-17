@@ -1,0 +1,42 @@
+#stageGameMinecraft {
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    background-image: url("../../img/gameUse/minecraft/MinecraftBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.playerGameMinecraft {
+    background-image: url("../../img/gameUse/minecraft/Minecraft.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.enemyGameMinecraft {
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center;
+}
+
+.enemy1GameMinecraft {
+    background-image: url("../../img/gameUse/minecraft/Bricks.png");
+}
+
+.enemy2GameMinecraft {
+    background-image: url("../../img/gameUse/minecraft/Bricks2.png");
+}
+
+.enemy3GameMinecraft {
+    background-image: url("../../img/gameUse/minecraft/Bricks3.png");
+}
+
+.enemy4GameMinecraft {
+    background-image: url("../../img/gameUse/minecraft/Bricks4.png");
+}

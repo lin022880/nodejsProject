@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品專區 - Universe</title>
+    <%- include('share/link'); -%>
+
+        <!-- 商品頁 -->
+        <link rel="stylesheet" href="/css/shoppingcss/indexP1.css">
+        <link rel="stylesheet" href="/css/shoppingcss/dropdown.css">
+        <link rel="stylesheet" href="/css/shoppingcss/indexBG.css">
+
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <%- include('share/header'); -%>
+        <indexBody>
+
+
+            <div style="min-height:180vh;">
+                <%- include('share/logo'); -%>
+
+                    <!-- 商品分類 -->
+                    <div class="SHtop">
+                        <!-- 返回鍵 -->
+                        <a href="/"><img id="SHreturn" class="curHover" src="/img/shopping/返回箭頭.png"></a>
+                        <!-- 商品分類圖片 -->
+                        <img id="SHlogoimg" src="/img/shopping/商品分類.png">
+                        <!-- 商品總數 -->
+                        <h4 id="SHtotal"></h4>
+                        <!-- 下拉清單 -->
+                        <div class="SHlistmenu">
+                            <select id="postButton" class="curHover">
+
+                        <option> 最新上架 </option>
+                        <option> 熱賣商品 </option>
+                        <option>價格低到高</option>
+                        <option>價格高到低</option>
+                    </select>
+                        </div>
+
+
+
+                    </div>
+
+                    <div style="display: flex;">
+                        <!-- 商品左側導覽列 -->
+                        <div class="SHnav">
+                            <nav>
+                                <ol>
+                                    <div id="pdall">
+                                        <li>
+                                            <div class="curHover">全站商品</div>
+                                        </li>
+                                    </div>
+                                    <div id="pdhot">
+                                        <li>
+                                            <div class="curHover">人氣商品推薦</div>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <div data-toggle="dropdown">新品預購專區</div>
+                                            <input type="checkbox" />
+
+                                            <ul class="dropdown1-menu pdnew">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">PlayStation4</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo Switch</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Xbox One</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">周邊商品</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">HORI認證商品專區</div>
+                                            <ul class="dropdown1-menu pdHORI">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">【PS4】HORI周邊商品</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">【NS】HORI周邊商品</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">PlayStation4 專區</div>
+                                            <ul class="dropdown1-menu pdps4">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">PlayStation4主機</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">PlayStation4遊戲</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">PlayStation4周邊</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">XBOX One 專區</div>
+                                            <ul class="dropdown1-menu pdXBOX">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Xbox One遊戲</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Xbox One周邊</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">PlayStationVita 專區</div>
+                                            <ul class="dropdown1-menu pdPSV">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">PlayStationVita遊戲</div>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">Nintendo 2DS/3DS專區</div>
+                                            <ul class="dropdown1-menu pd3DS">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo 2DS/3DS遊戲</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo 2DS/3DS周邊</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="dropdown1">
+                                            <input type="checkbox" />
+                                            <div data-toggle="dropdown1">Nintendo Switch專區</div>
+                                            <ul class="dropdown1-menu pdswitch">
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo Switch遊戲</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo Switch主機</div>
+                                                </li>
+                                                <li class="SHnavhover">
+                                                    <div class="btn btn-5 curHover product">Nintendo Switch周邊</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </ol>
+                            </nav>
+                            <div style="height: 20vh;"></div>
+                        </div>
+                        <!-- 商品表 -->
+                        <div class="SHcardgroup">
+
+
+
+                        </div>
+                    </div>
+
+            </div>
+
+        </indexBody>
+        <!-- footer -->
+        <%- include('share/footer'); -%>
+
+</body>
+<script src="/js/share/share.js"></script>
+<script>
+    // 左側導覽特效
+    // $(".product").click(function() {
+    //     var a = $(this).parents(".SHnavhover");
+    //     a.append('<img class="SHnavhoverafter" src="/img/shopping/左邊導覽列hover黃.png" alt="">');
+    //     if (!a) {
+    //         a.removeData('<img class="SHnavhoverafter" src="/img/shopping/左邊導覽列hover黃.png" alt="">');
+    //     }
+
+    // });
+
+
+
+    //資料庫分類
+    $(function() {
+
+
+        var pdList = [];
+        var sortList = [];
+
+        $.get("/shopping/product", function(e) {
+            pdList = JSON.parse(e);
+            sortList = JSON.parse(e);
+
+            refresh();
+
+        })
+
+        function refresh() {
+            $(".SHcardgroup").empty();
+
+            const total = pdList.length;
+            $("#SHtotal").text("共" + total + "件商品");
+            
+            $.each(pdList, function(key, obj) {
+                    const productID = obj.productID;
+
+                    const type = obj.type;
+                    const style = obj.style;
+                    const images = obj.images;
+                    const pdname = obj.name;
+                    const price = obj.price;
+                    const sales = obj.sales;
+                    const pbstock = obj.stock;
+                    const total = obj.length;
+
+                    const salesprice = ((100 - sales) / 100 * price).toFixed(0);
+                    // 庫存大於0 沒特價
+                    var a = '<div class="SHcard">\
+        <div class="SHimg"><a href="/pdMsg?id=' + productID + '"><img id="shimg" class="curHover" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png"' + 'alt="" ></a></div>\
+        <div class="SHbg"><img src="/img/shopping/商品BG.png" alt=""></div>\
+        <div class="SHprice">\
+        <div class="SHprice1-2"><img id="SHpricebg" src="/img/shopping/價格黑框2.png" alt=""><span id="SHpricename2">NT' + price + '</span></div> \
+        </div>\
+        <div class="SHstar"><img id="pd_' + productID + '" class="like notStar curHover" src="/img/shopping/暗星星2.png" alt=""></div>\
+        <div class="SHcardname"><h4 id="SHcardnameword">' + pdname + '</h4><img id="SHcardnamebg" src="/img/shopping/商品名BG.png" alt=""></div></div>';
+                    // 庫存大於0 有特價       
+                    var c = '<div class="SHcard">\
+        <div class="SHimg"><a href="/pdMsg?id=' + productID + '"><img id="shimg" class="curHover" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png"' + 'alt=""></a></div>\
+        <div class="SHbg"><img src="/img/shopping/商品BG.png" alt=""></div>\
+        <div class="SHprice">\
+        <div class="SHprice1-1"><img id="SHdiscountbg" src="/img/shopping/打折紅框.png" alt=""><span id="SHdiscountname">' + sales + '%</span><img id="SHpricebg" src="/img/shopping/價格黑框.png" alt=""><span id="SHpricename">NT' + salesprice + '</span></div></div>\
+        <div class="SHstar"><img id="pd_' + productID + '" class="like notStar curHover" src="/img/shopping/暗星星2.png" alt=""></div>\
+        <div class="SHcardname"><h4 id="SHcardnameword">' + pdname + '</h4><img id="SHcardnamebg" src="/img/shopping/商品名BG.png" alt=""></div></div>';
+                    // 庫存0 沒特價      
+                    var b = '<div class="SHcard">\
+        <div class="SHimg"><a href="/pdMsg?id=' + productID + '"><img id="shimg" class="curHover" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png"' + 'alt="" style="opacity: 40%;"></a></div>\
+        <div class="SHbg"><img src="/img/shopping/商品BG.png" alt=""></div>\
+        <div class="SHsellout"><img id="shsellout" src="/img/shopping/已售完.png" alt=""></div>\
+        <div class="SHprice">\
+        <div class="SHprice1-2"><img id="SHpricebg" src="/img/shopping/價格黑框2.png" alt=""><span id="SHpricename2">NT' + price + '</span></div> \
+        </div>\
+        <div class="SHstar"><img id="pd_' + productID + '" class="like notStar curHover" src="/img/shopping/暗星星2.png" alt=""></div>\
+        <div class="SHcardname"><h4 id="SHcardnameword">' + pdname + '</h4><img id="SHcardnamebg" src="/img/shopping/商品名BG.png" alt=""></div></div>'
+                        // 庫存0 有特價       
+                    var d = '<div class="SHcard">\
+        <div class="SHimg"><a href="/pdMsg?id=' + productID + '"><img id="shimg" class="curHover" src="/img/shopping/商品/' + style + '/' + type + '/' + images + '.png"' + 'alt="" style="opacity: 40%;"></a></div>\
+        <div class="SHbg"><img src="/img/shopping/商品BG.png" alt=""></div>\
+        <div class="SHsellout"><img id="shsellout" src="/img/shopping/已售完.png" alt=""></div>\
+        <div class="SHprice">\
+        <div class="SHprice1-1"><img id="SHdiscountbg" src="/img/shopping/打折紅框.png" alt=""><span id="SHdiscountname">' + sales + '%</span><img id="SHpricebg" src="/img/shopping/價格黑框.png" alt=""><span id="SHpricename">NT' + salesprice + '</span></div></div>\
+        <div class="SHstar"><img id="pd_' + productID + '" class="like notStar curHover" src="/img/shopping/暗星星2.png" alt=""></div>\
+        <div class="SHcardname"><h4 id="SHcardnameword">' + pdname + '</h4><img id="SHcardnamebg" src="/img/shopping/商品名BG.png" alt=""></div></div>'
+                    if (pbstock !== 0) {
+                        if (sales == 0) {
+                            $(".SHcardgroup").append(a);
+                        } else {
+                            $(".SHcardgroup").append(c);
+                        }
+                    } else {
+                        if (sales == 0) {
+                            $(".SHcardgroup").append(b);
+                        } else {
+                            $(".SHcardgroup").append(d);
+                        }
+
+                    }
+
+
+                })
+                // $.get("/shopping/product", function(e) {
+                //     pdList = JSON.parse(e);
+                // })
+        }
+
+
+        $("#postButton").change(function() {
+            switch ($(this).val()) {
+
+                case "最新上架":
+                    pdList.sort(function(a, b) {
+
+                        return a.add_date < b.add_date ? 1 : -1;
+                    });
+
+                    break;
+                case "熱賣商品":
+                    pdList.sort(function(a, b) {
+                        return a.popularity < b.popularity ? 1 : -1;
+                    });
+                    break;
+                case "價格低到高":
+                    pdList.sort(function(a, b) {
+                        return a.price > b.price ? 1 : -1;
+                    });
+                    break;
+                case "價格高到低":
+                    pdList.sort(function(a, b) {
+                        return a.price < b.price ? 1 : -1;
+                    });
+                    break;
+            }
+
+            refresh();
+        })
+        $("#pdall").click(function() {
+            pdList = sortList;
+            pdList.sort(function(a, b) {
+                return a.productID > b.productID ? 1 : -1;
+            });
+
+
+            refresh();
+
+
+        })
+        $("#pdhot").click(function() {
+            pdList = sortList;
+            pdList.sort(function(a, b) {
+
+                return a.popularity < b.popularity ? 1 : -1;
+
+
+
+            });
+
+            refresh();
+        })
+        $(".pdnew").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "PlayStation4":
+
+                    var a = pdList.filter(a => a.typeID == 2);
+
+                    pdList = a;
+                    break;
+                case "Nintendo Switch":
+                    var a = pdList.filter(a => a.typeID == 1);
+
+                    pdList = a;
+                    break;
+                case "Xbox One":
+                    var a = pdList.filter(a => a.typeID == 3);
+
+                    pdList = a;
+                    break;
+                case "周邊商品":
+                    var a = pdList.filter(a => a.typeID == 5);
+
+                    pdList = a;
+                    break;
+
+
+            }
+            refresh();
+        })
+        $(".pdHORI").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "【PS4】HORI周邊商品":
+
+                    var a = pdList.filter(a => a.typeID == 2 & a.styleID == 3);
+
+
+                    pdList = a;
+                    break;
+                case "【NS】HORI周邊商品":
+                    var a = pdList.filter(a => a.typeID == 1 & a.styleID == 3);
+
+                    pdList = a;
+                    break;
+            }
+            refresh();
+        })
+        $(".pdps4").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "PlayStation4主機":
+
+                    var a = pdList.filter(a => a.typeID == 2 & a.styleID == 2);
+
+                    pdList = a;
+                    break;
+                case "PlayStation4遊戲":
+                    var a = pdList.filter(a => a.typeID == 2 & a.styleID == 1);
+
+                    pdList = a;
+                    break;
+                case "PlayStation4周邊":
+                    var a = pdList.filter(a => a.typeID == 2 & a.styleID == 3);
+
+                    pdList = a;
+                    break;
+
+
+
+            }
+            refresh();
+        })
+        $(".pdXBOX").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "Xbox One遊戲":
+
+                    var a = pdList.filter(a => a.typeID == 3 & a.styleID == 1);
+
+                    pdList = a;
+                    break;
+                case "Xbox One周邊":
+                    var a = pdList.filter(a => a.typeID == 3 & a.styleID == 2);
+
+                    pdList = a;
+                    break;
+            }
+            refresh();
+        })
+        $(".pdPSV").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "PlayStationVita遊戲":
+                    var a = pdList.filter(a => a.typeID == 4 & a.styleID == 1);
+                    pdList = a;
+                    break;
+
+            }
+            refresh();
+        })
+        $(".pd3DS").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "Nintendo 2DS/3DS遊戲":
+                    var a = pdList.filter(a => a.typeID == 6 & a.styleID == 1);
+                    pdList = a;
+                    break;
+                case "Nintendo 2DS/3DS周邊":
+                    var a = pdList.filter(a => a.typeID == 6 & a.styleID == 3);
+                    pdList = a;
+                    break;
+
+            }
+            refresh();
+        })
+        $(".pdswitch").children("li").children("div").click(function() {
+            pdList = sortList;
+            switch (this.innerHTML) {
+
+                case "Nintendo Switch遊戲":
+                    var a = pdList.filter(a => a.typeID == 1 & a.styleID == 1);
+                    pdList = a;
+                    break;
+                case "Nintendo Switch主機":
+                    var a = pdList.filter(a => a.typeID == 1 & a.styleID == 2);
+                    pdList = a;
+                    break;
+                case "Nintendo Switch周邊":
+                    var a = pdList.filter(a => a.typeID == 1 & a.styleID == 3);
+                    pdList = a;
+                    break;
+
+            }
+            refresh();
+        })
+
+
+        if ("<%= data %>") {
+            var collectList = [];
+
+
+            $.get("/collect", function(e) {
+                collectList = JSON.parse(e);
+
+                refreshFavor();
+            })
+
+            function refreshFavor() {
+                for (let index = 1; index < collectList.length; index++) {
+                    $("#pd_" + collectList[index].productID).removeClass("notStar").addClass("showStar").attr("src", "/img/index/set/P3/商品星星.png");
+                }
+            }
+
+
+
+        }
+
+        $(document).on("click", ".notStar", function() {
+            console.log("ok");
+            $(this).removeClass("notStar").addClass("showStar").attr("src", "/img/index/set/P3/商品星星.png");
+            var joinFavor = $(this).attr("id").split("_", 2);
+
+            if ("<%= data %>") {
+
+                collectList[0].productID = joinFavor[1];
+                $.ajax({
+                    type: "post",
+                    url: "/collect",
+                    data: collectList[0]
+                })
+                $.get("/collect", function(e) {
+                    collectList = JSON.parse(e);
+
+                    refreshFavor();
+                })
+
+            }
+        });
+
+
+        $(document).on("click", ".showStar", function() {
+            console.log("no");
+            $(this).removeClass("showStar").addClass("notStar").attr("src", "/img/index/set/P3/暗星星2.png");
+            var delFavor = $(this).attr("id").split("_", 2);
+            if ("<%= data %>") {
+                collectList[0].productID = delFavor[1];
+                $.ajax({
+                    type: "delete",
+                    url: "/collect",
+                    data: collectList[0]
+                })
+            }
+        });
+
+
+    })
+</script>
+<script>
+   
+</script>
+</html>

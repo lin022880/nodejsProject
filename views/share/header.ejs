@@ -1,0 +1,118 @@
+<head>
+    <div id="navbar">
+        <img class="navbarBG" src="/img/navbar/背景.png">
+        <a href="/shopping"><img class="navbarButton1 curHover" src="/img/navbar/商品分類.png"></a>
+        <a href=""><img class="navbarButton1 curHover" src="/img/navbar/SWITCH專區.png"></a>
+        <a href=""><img class="navbarButton1 curHover" src="/img/navbar/PS4PSV專區.png"></a>
+        <a href=""><img class="navbarButton1 curHover" src="/img/navbar/XBOX專區.png"></a>
+        <a href=""><img class="navbarButton1 curHover" src="/img/navbar/優惠專區.png"></a>
+
+        <div class="navbarHoverP">
+            <div id="memberButton" class="navbarButton2">
+                <img class="curHover" src="/img/navbar/會員.png">
+            </div>
+            <% if (data) { %>
+                <ul class="memberPSet2">
+                    <li></li>
+                    <li><a id="goto_userData" href="/member" class="curHover">會員資料</a></li>
+                    <li><a id="goto_userOrder" href="/member" class="curHover">我的訂單</a></li>
+                    <li><a id="goto_userDiscount" href="/member" class="curHover">我的優惠券</a></li>
+                    <li><a id="clear_goto" href="/logout" class="curHover">登出</a></li>
+                </ul>
+                <% } else {%>
+                    <div class="memberPSet">
+                        <div class="triangle"></div>
+                        <span class="promptP">我的會員</span>
+                    </div>
+                    <% }; %>
+        </div>
+
+        <div class="navbarHoverP">
+            <div id="wantButton" class="navbarButton2">
+                <img class="curHover" src="/img/navbar/願望清單.png">
+            </div>
+            <ul id="want">
+                <li></li>
+                <li><a href="" class="curHover">最新消息</a></li>
+                <li><a href="" class="curHover">商品預購</a></li>
+                <li><a href="" class="curHover">商品進貨消息</a></li>
+                <li><a href="" class="curHover">好康優惠活動</a></li>
+                <li><a id="goto_userFavor" href="/member" class="curHover">我的收藏</a></li>
+            </ul>
+        </div>
+
+        <div class="navbarHoverP">
+            <a href="/shoppingcar" id="shoppingButton" class="navbarButton2">
+                <img class="curHover" src="/img/navbar/購物車.png">
+            </a>
+            <div id="shoppingPSet">
+                <div class="triangle"></div>
+                <span class="promptP promptP2">購物車</span>
+            </div>
+        </div>
+
+        <form id="search" action="" method="post">
+            <input id="searchInput" class="curHover" type="search" name="">
+            <input id="searchSubmit" class="curHover" type="submit" value="">
+            <img id="searchImg" class="curHover" src="/img/index/set/P1/搜尋BG(做的像就好).png" alt="">
+            <img id="searchImg2" class="curHover" type="button" src="/img/index/set/P1/搜尋放大鏡.png" alt="">
+        </form>
+    </div>
+    <% if (data) { %>
+        <% } else {%>
+            <div id="memberBox">
+                <div id="memberCreateShow" class="memberSet">
+                    <form action="/create" method="post">
+                        <div id="memberCreate">
+                            <div class="memberCreateInput">
+                                <span id="demo_uselogin">帳號</span><input id="uselogin1" class="memberInput2 curHover" type="email" placeholder="請輸入gmail信箱" name="userId" maxlength="30" required oninvalid="setCustomValidity('ex: abc@gmail.com');" pattern="[a-zA-Z0-9]+@gmail.com">
+                            </div>
+                            <div class="memberCreateInput">
+                                <span>密碼</span><input id="uselogin2" class="memberInput2 curHover" type="password" placeholder="請輸入4-6碼" name="userPsw" maxlength="6" required oninvalid="setCustomValidity('至少4碼至多6碼，0-9數字');" id="">
+                            </div>
+                            <div class="memberCreateInput">
+                                <span>信箱</span><input id="uselogin3" class="memberInput2 curHover" type="email" placeholder="請輸入聯絡信箱" name="userEml" maxlength="30" required id="">
+                            </div>
+                            <div class="memberCreateCkbox">
+                                <input class="curHover" type="checkbox" name="memberData" id="memberData">
+                                <label class="curHover" for="memberData">我同意會員服務同意書</label>
+                            </div>
+                            <div class="memberCreateCkbox">
+                                <input class="curHover" type="checkbox" name="userData" id="userData">
+                                <label class="curHover" for="userData">我同意個人資料提供同意書</label>
+                            </div>
+                            <label for="createButton">
+                        <input type="submit" name="createButton" id="createButton">
+                        <img id="create" class="curHover" src="/img/memberLoginOut/點擊註冊.png" alt="">
+                    </label>
+                        </div>
+                    </form>
+                    <img class="memberImg" src="/img/memberLoginOut/會員註冊.png" alt="">
+                    <div id="memberCreateClose" class="memberClose curHover"></div>
+                </div>
+                <div id="memberLoginShow" class="memberSet">
+                    <form action="/login" method="post">
+                        <div id="memberLogin">
+                            <input class="memberInput curHover" type="email" name="memberUser" id="memberUser" placeholder="帳號" value="">
+                            <input class="memberInput curHover" type="password" name="memberPw" id="memberPw" placeholder="密碼">
+                            <a id="forget" class="curHover" href="">忘記/查詢密碼</a>
+                            <div class="memberLoginCkbox">
+                                <input class="curHover" type="checkbox" name="remenberUser" id="remenberUser">
+                                <label class="curHover" for="remenberUser">記住帳號</label>
+                                <input class="curHover" type="checkbox" name="keepUser" id="keepUser">
+                                <label class="curHover" for="keepUser">保持登入狀態</label>
+                            </div>
+                            <span style="font-size: 1.3vw;">公用電腦請記得登出，或開啟無痕模式</span>
+                            <label class="submitLabel" for="loginButton">
+                        <input type="submit" name="" id="loginButton">
+                        <img id="loginImg" class="curHover" src="/img/memberLoginOut/登入.png" alt="">
+                    </label>
+                            <span>還不是會員嗎? <span id="goCreate" class="curHover">立刻註冊新帳號</span></span>
+                        </div>
+                    </form>
+                    <img id="demo_use_login" class="memberImg" src="/img/memberLoginOut/會員登入.png" alt="">
+                    <div id="memberLoginClose" class="memberClose curHover"></div>
+                </div>
+            </div>
+            <% } ;%>
+</head>

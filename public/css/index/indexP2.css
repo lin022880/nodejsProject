@@ -1,0 +1,18 @@
+div#P2Box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.P2Ad {
+    width: 30%;
+    margin: 0 1.5%;
+}
+
+.P2Ad>img {
+    width: 100%;
+}

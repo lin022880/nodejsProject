@@ -1,0 +1,244 @@
+/* 右上角navbar */
+
+#navbar {
+    z-index: 99;
+    position: fixed;
+    right: 0px;
+    top: 5px;
+}
+
+.navbarBG {
+    position: absolute;
+    top: -10px;
+    right: -5vw;
+    width: 49.5vw;
+    height: 7vw;
+}
+
+.navbarButton1 {
+    width: 4.8vw;
+    margin: 0.35vw;
+    position: relative;
+}
+
+.navbarButton2 {
+    display: inline-block;
+    height: 4vw;
+    width: 4vw;
+    margin: 0.2vw;
+    position: relative;
+    top: -9px;
+}
+
+#wantButton {
+    margin-right: -0.2vw;
+}
+
+#memberButton {
+    margin-left: 0.8vw;
+}
+
+#shoppingButton {
+    margin-right: 0.8vw;
+}
+
+.navbarButton2>img {
+    width: 100%;
+    /* height: 100%;
+    object-fit: contain; */
+}
+
+
+/* 會員,購物車提示字 */
+
+.navbarHoverP {
+    display: inline-flex;
+    position: relative;
+}
+
+.memberPSet {
+    display: none;
+    width: 7.2vw;
+    height: 2vw;
+    position: absolute;
+    transform: translate(-45%, -25%);
+    left: 50%;
+    top: 100%;
+    z-index: 2;
+}
+
+div#shoppingPSet {
+    display: none;
+    width: 8.2vw;
+    height: 2vw;
+    position: absolute;
+    transform: translate(-50%, -25%);
+    left: 53%;
+    top: 100%;
+    z-index: 2;
+}
+
+.promptP {
+    background: white;
+    padding: 0.5vw 0.8vw;
+    border-radius: 1vw;
+    position: relative;
+    top: 0.3vw;
+    font-size: 1.3vw;
+}
+
+.promptP2 {
+    left: 0.8vw;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.5vw 1vw 0.5vw;
+    border-color: transparent transparent white transparent;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#memberButton:hover~.memberPSet {
+    display: unset;
+}
+
+#memberButton:hover~.memberPSet2 {
+    display: unset;
+}
+
+#shoppingButton:hover~#shoppingPSet {
+    display: unset;
+}
+
+
+/* 願望清單 */
+
+.memberPSet2,
+ul#want {
+    display: none;
+    width: 11vw;
+    padding: 0.5vw 1vw;
+    position: absolute;
+    transform: translate(-50%, -9%);
+    left: 55%;
+    top: 100%;
+    list-style-type: none;
+    background-color: white;
+    text-align: center;
+    border-radius: 13px;
+    font-size: 1.3vw;
+    z-index: 2;
+}
+
+.memberPSet2 {
+    transform: translate(-50%, -9%);
+}
+
+.memberPSet2 a,
+ul#want a {
+    color: black;
+    text-decoration: none;
+}
+
+.memberPSet2 a:hover,
+ul#want a:hover {
+    color: #888888;
+}
+
+.memberPSet2>li,
+ul#want>li {
+    border-top: 1px solid;
+    padding: 2px;
+}
+
+.memberPSet2>li:nth-child(2),
+ul#want>li:nth-child(2) {
+    border-top: none;
+}
+
+.memberPSet2>li:first-child,
+ul#want>li:first-child {
+    margin: auto;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #666666 transparent transparent transparent;
+}
+
+#wantButton:hover~#want {
+    display: unset;
+}
+
+.memberPSet2:hover,
+#want:hover {
+    display: unset;
+}
+
+
+/* 搜尋 */
+
+#search {
+    width: 13vw;
+    position: absolute;
+    top: 5vw;
+    right: 0;
+}
+
+input#searchInput {
+    border: none;
+    font-size: 1.3vw;
+    box-shadow: none;
+    color: white;
+    width: 11vw;
+    height: 2vw;
+    padding: 0 0 0 0.5vw;
+    position: absolute;
+    background: transparent;
+    left: 4px;
+    z-index: 1;
+}
+
+input#searchSubmit {
+    border: none;
+    position: absolute;
+    padding: 0;
+    right: 6px;
+    background: transparent;
+    width: 1.5vw;
+    height: 2vw;
+    z-index: 1;
+}
+
+#searchImg {
+    width: 100%;
+}
+
+#searchImg2 {
+    width: 1.8vw;
+    position: absolute;
+    right: 2px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#searchInput:focus,
+#searchSubmit:focus {
+    outline: none;
+}
+
+
+/* P1右上角按鈕 */
+
+.navbarButton1:hover {
+    transform: scale(1.2);
+}
+
+.navbarButton2:hover {
+    filter: brightness(0.5);
+}

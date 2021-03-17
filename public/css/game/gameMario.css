@@ -1,0 +1,37 @@
+#stageGameMario {
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    background-image: url("../../img/gameUse/mario/MarioBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.playerGameMario {
+    background-image: url("../../img/gameUse/mario/Mario.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.enemyGameMario {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.enemy1GameMario {
+    background-image: url("../../img/gameUse/mario/Goomba.png");
+}
+
+.enemy2GameMario {
+    background-image: url("../../img/gameUse/mario/Koopa.png");
+}
+
+.enemy3GameMario {
+    background-image: url("../../img/gameUse/mario/Boo.png");
+}

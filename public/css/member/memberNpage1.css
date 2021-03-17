@@ -1,0 +1,379 @@
+#pageBoxSet *:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+div#memberPage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* 背景 */
+
+img#memberPageBg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* 中間袋子 */
+
+div#pageBoxSet {
+    width: 70vw;
+    height: 42vw;
+    position: absolute;
+    transform: translate(-50%, -45%);
+    top: 50%;
+    left: 50%;
+}
+
+
+/* 標籤 */
+
+img.titleSet {
+    width: 12vw;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* 會員表格 */
+
+div.page {
+    position: relative;
+    width: 70vw;
+    height: 40vw;
+}
+
+
+/* 表格背景 */
+
+img.pageBg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 大頭貼+上傳 袋子 */
+
+div#memberPicSet {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 2vw;
+    left: 4vw;
+}
+
+
+/* 頭貼袋子 */
+
+div#pictureBox {
+    width: 11vw;
+    height: 11vw;
+    position: absolute;
+}
+
+
+/* 頭貼框 */
+
+img.pictureBoxBg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 大頭貼 */
+
+img#picture {
+    width: 83%;
+    height: 83%;
+    position: absolute;
+    transform: translate(-51%, -51%);
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+}
+
+
+/* 上傳按鈕 */
+
+#uploadBox {
+    margin: 0;
+    width: 8vw;
+    height: 2.8vw;
+    position: absolute;
+    top: 12vw;
+    transform: translateX(-43%);
+    left: 50%;
+    border-radius: 5px;
+    background: url(../../img/member/page1/set/上傳大頭貼bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.1vw;
+    padding: 0.5vw 0 0.5vw 0.5vw;
+}
+
+.spanP2 {
+    transform: translate(-53%, -55%);
+}
+
+input#upload {
+    display: none;
+}
+
+
+/* 共用字 */
+
+.spanP {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    font-size: 1.3vw;
+    color: #707070;
+}
+
+img#uploadImg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 名字 */
+
+div#memberNameBox {
+    position: absolute;
+    width: 11vw;
+    height: 3vw;
+    top: 17vw;
+}
+
+.whiteColor {
+    color: white;
+}
+
+.dataTitleBg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 會員資料 */
+
+div#memberData {
+    position: absolute;
+    transform: translate(-50%, -47%);
+    width: 37vw;
+    height: 34vw;
+    top: 50%;
+    left: 50%;
+}
+
+
+/* 共用星星 */
+
+img.star {
+    width: 2vw;
+}
+
+
+/* 共用 data1~data8 */
+
+.data {
+    margin: 1vw 0;
+    font-size: 1.3vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data1 {
+    margin: 0 0 2.5vw 0;
+}
+
+.data2 {
+    padding-left: 2vw;
+}
+
+.data3 {
+    margin: 2.5vw 0 0 0;
+}
+
+
+/* 共用標籤袋子 */
+
+.dataTitleBox {
+    position: relative;
+    width: 11vw;
+    height: 3vw;
+    margin-right: 1.5vw;
+}
+
+
+/* input */
+
+input.dataP {
+    width: 22vw;
+    padding: 0.4vw 1vw;
+    border-radius: 3px;
+    border: none;
+    color: #707070;
+}
+
+
+/* 設定密碼 */
+
+input#pswInput {
+    width: 10vw;
+    margin-right: 2vw;
+}
+
+input#pswInputButton {
+    width: 8vw;
+    height: 3vw;
+    margin-right: 2vw;
+    font-size: 1.3vw;
+}
+
+
+/* 修改密碼視窗 */
+
+div#pswChangeBox {
+    width: 23vw;
+    height: 23vw;
+    background: cadetblue;
+    text-align: center;
+    padding: 2.5vw;
+    border-radius: 5px;
+}
+
+
+/* 背景 */
+
+div#pswChangeBoxBg {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000061;
+}
+
+.msgBox {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+input.pswChange {
+    margin: 1vw 0;
+    width: 14vw;
+    height: 2.5vw;
+    font-size: 1.3vw;
+    padding: 0.4vw 1vw;
+    border-radius: 3px;
+    border: none;
+}
+
+input#pswChangeOk {
+    margin: 0.5vw;
+    width: 7vw;
+    font-size: 1.5vw;
+}
+
+input#pswChangeCl {
+    margin: 0.5vw;
+    width: 7vw;
+    font-size: 1.5vw;
+}
+
+
+/* 確定 取消按鈕 */
+
+input#dataOk,
+input#dataCl {
+    display: none;
+}
+
+.dataOkImg,
+.dataClImg {
+    width: 5vw;
+    margin: 0 0.7vw;
+}
+
+.dataOkImg:hover,
+.dataClImg:hover {
+    filter: sepia(1);
+}
+
+
+/* 右邊Icon */
+
+img#memberIcon {
+    position: absolute;
+    width: 5vw;
+    top: 2vw;
+    right: 3vw;
+}
+
+
+/* msgBox尺寸 */
+
+.size1 {
+    display: flex;
+    width: 32vw;
+    height: 18vw;
+    filter: drop-shadow(2px 4px 6px black);
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: all 0.5s;
+    background: antiquewhite;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    z-index: -1;
+}
+
+
+/* 關閉按鈕 */
+
+button#msgBoxCloseBtn {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    right: -0.8vw;
+    top: -0.8vw;
+    border-radius: 100%;
+    padding: 0;
+    font-size: 0.5vw;
+}
+
+
+/* msgBox1  */
+
+img.showOkImg {
+    width: 13vw;
+    margin: 1vw;
+}
+
+#page1 {
+    /* display: none; */
+}
+
+#page1 input:invalid {
+    box-sizing: border-box;
+    border: 2px solid lightpink;
+}
+
+#page1 input:valid {
+    box-sizing: border-box;
+    border: 2px solid lightgreen;
+}

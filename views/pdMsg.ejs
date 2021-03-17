@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品資訊 - Universe</title>
+
+    <%- include('share/link'); -%>
+
+        <!-- 商品彈出視窗 -->
+        <link rel="stylesheet" href="/css/index/P3OutBox.css">
+        <!-- sweet alert2 -->
+        <link rel="stylesheet" href="sweetalert2.min.css">
+
+</head>
+
+<body>
+    <div id="pageShowPdBox">
+        <form action="" method="post">
+            <img id="P3OutBoxImg" src="/img/index/set/outBox/背景.png" alt="">
+            <a href="/shopping">
+                <img id="P3OutBoxClose" class="close curHover" src="/img/index/set/outBox/返回2.png" alt="">
+            </a>
+            <a href="/shoppingcar">
+                <img id="P3OutBoxcar" class="curHover" src="/img/index/set/outBox/購物車.png" alt="">
+            </a>
+            <!-- 左邊 -->
+            <div id="P3OutSetPdNameBox">
+                <!-- <span id="P3OutBoxSetPdName">商品名稱 :</span> -->
+                <span id="P3OutBoxPdName"><%= rows[0].name %></span>
+            </div>
+            <div id="P3OutIntroductionTitle">
+                <img id="pdIntroductionImg" class="curHover" src="/img/index/set/outBox/商品介紹.png" alt="">
+                <img id="pdFormatImg" class="curHover" src="/img/index/set/outBox/商品規格.png" alt="">
+                <img id="buyKnowImg" class="curHover" src="/img/index/set/outBox/購買須知.png" alt="">
+            </div>
+            <div id="P3OutIntroductionBox">
+                <div id="pdIntroduction"><span> <%= rows[0].content %></span>
+                </div>
+                <div id="pdFormat"><span><%= rows[0].format %></span></div>
+                <div id="buyKnow"><span> 此商品數量未定，若數量不足會再協助買家取消訂單並補償折價劵，謝謝配合。
+                        此預購商品目前開放「信用卡線上付款」、「門市取貨付款」，預購不須先支付商品額外預收訂金。待商品到門市後，
+                        本館將視商品數量以及訂單排序通知，選擇「門市取貨付款」者會接獲該門市該筆訂單通知，再請到門市完成後續付款與取貨動作，敬請安心下訂。
+                        ------------------------------------------------------------------------------------
+                        請注意：因商品資訊未明，目前此商品價格為「預估售價」，為保障您的權益請詳閱以下說明：
+                        1.「預估售價」為原產地售價經台幣匯率換算及加成後之「暫定價格」。 2. 待代理商公佈官方建議售價後，將以官方建議售價為主並做同步調整。 3.
+                        價格異動的差額採「多退少不補」方式，恕不退還現金，信用卡付款如遇到預收金額超過實際金額，會以購物金的方式退回到個人帳號，購物金如同現金可在下次購買使用，沒有使用期限和金額限制，使用後若取消訂單不會復原，請謹慎使用
+                    </span> </div>
+            </div>
+            <div id="addBuy">
+                <label class="addBuyImgBox">
+                    <input type="radio" name="PdOther" id="PdOther1">
+                    <img class="curHover" src="/img/shopping/商品/game/ps4/PS4game_01.png" alt="">
+                </label>
+                <label class="addBuyImgBox">
+                    <input type="radio" name="PdOther" id="PdOther2">
+                    <img class="curHover" src="/img/shopping/商品/game/switch/switchgame_01.png" alt="">
+                </label>
+                <label class="addBuyImgBox">
+                    <input type="radio" name="PdOther" id="PdOther3">
+                    <img class="curHover" src="/img/shopping/商品/game/xbox/xboxgame_01.png" alt="">
+                </label>
+                <label class="addBuyImgBox">
+                    <input type="radio" name="PdOther" id="PdOther4">
+                    <img class="curHover" src="/img/shopping/商品/game/psv/psvgame_01.png" alt="">
+                </label>
+            </div>
+
+            <!-- 中間 -->
+            <div id="P3OutPd">
+                <img src="/img/shopping/商品/<%= rows[0].style %>/<%= rows[0].type %>/<%= rows[0].images %>.png" alt="">
+            </div>
+            <div id="P3OutPdOtherImg">
+                <div class="P3OutPdOtherImgBox">
+                    <img class="curHover" src="/img/shopping/商品/<%= rows[0].style %>/<%= rows[0].type %>/<%= rows[0].images %>.png" alt="">
+                </div>
+                <% if( rows[0].img1){ %>
+                    <div class="P3OutPdOtherImgBox">
+                        <img class="curHover" src="/img/shopping/商品/<%= rows[0].style %>/<%= rows[0].type %>/<%= rows[0].img1 %>.png" alt="">
+                    </div>
+                    <% } %>
+                        <% if( rows[0].img2){ %>
+                            <div class="P3OutPdOtherImgBox">
+                                <img class="curHover" src="/img/shopping/商品/<%= rows[0].style %>/<%= rows[0].type %>/<%= rows[0].img2 %>.png" alt="">
+                            </div>
+                            <% } %>
+                                <% if( rows[0].img3){ %>
+                                    <div class="P3OutPdOtherImgBox">
+                                        <img class="curHover" src="/img/shopping/商品/<%= rows[0].style %>/<%= rows[0].type %>/<%= rows[0].img3 %>.png" alt="">
+                                    </div>
+                                    <% } %>
+            </div>
+
+
+            <!-- 右邊 -->
+
+            <div id="P3OutSetPdRightBox">
+
+
+
+                <span id="P3OutPdLike">加入收藏</span>
+                <div id="starBox">
+                    <img id="pd_star" class="curHover notStar P3OutPdLike" src="/img/index/set/outBox/暗星星.png" alt="">
+                </div>
+                <div id="P3OutPdAdd">
+                    <input type="checkbox" name="" id="P3OutPdAddCk" class="curHover">
+                    <label class="curHover" for="P3OutPdAddCk">立即申辦【Universe】VIP會員卡！ <p>(即日起，凡申辦會員卡，就享有優惠！) </p>
+                    </label>
+                </div>
+
+                <ul id="P3OutPdFreight">付款與運送方式：<span></span>
+                    <li>7-11取貨付款</li>
+                    <li>全家、OK、萊爾富取貨付款</li>
+                    <li>貨到付款</li>
+                </ul>
+                <div id="PdStockBox">
+                    <span id="P3OutBoxSetPdStock">庫存:</span>
+                    <span id="P3OutBoxPdStock"><%= rows[0].stock %></span>
+                </div>
+
+                <% if(rows[0].sales!=0){%>
+                    <p class="priceP">原價<span id="P3OutBoxPdPrice">NT$<%= rows[0].price + 1000 %></span></p>
+                    <p class="priceP2">一般價<span id="P3OutBoxPdSalePrice">NT$<%= rows[0].price %></span></p>
+                    <p class="priceP2">&nbsp;&nbsp;特價<span id="P3OutBoxPdVipPrice">NT$<%= (parseInt(rows[0].price)*((100-rows[0].sales) /100)).toFixed(0) %></span></p>
+                    <% }else{%>
+                        <br>
+                        <p class="priceP">原價<span id="P3OutBoxPdPrice">NT$<%= rows[0].price + 1000 %></span></p>
+                        <p class="priceP2">一般價<span id="P3OutBoxPdSalePrice">NT$<%= rows[0].price %></span></p>
+                        <%}%>
+                            <hr>
+            </div>
+
+            <div id="P3OutPdCountBox">
+                <label>商品數量</label>
+                <select id="changeNum" class="classic curHover" name="" onfocus='if(this.options.length>5){this.size=5}else{this.size=this.options.length}' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                </select>
+                <input id="joinCar" class="btn btn-info curHover" type="button" value="加入購物車">
+                <input id="buyNow" class="btn btn-danger curHover" type="button" value="立即購買">
+            </div>
+        </form>
+    </div>
+
+    <script src="/js/share/share.js"></script>
+    <script src="/js/index/index.js"></script>
+
+    <script>
+        //format 空白換成換行
+        $("#pdFormat").html(function(a, b) {
+            b = b.replace(/\n/g, "<br>");
+            return b;
+        });
+        $("#buyKnow").html(function(a, b) {
+            b = b.replace(/\n/g, "<br>");
+            return b;
+        });
+        $("#pdIntroduction").html(function(a, b) {
+            b = b.replace(/\n/g, "<br>");
+            return b;
+        });
+        $(function() {
+            var countSImg = $("#P3OutPdOtherImg .P3OutPdOtherImgBox").length;
+            $("#P3OutPdOtherImg").css("width", countSImg * 9 + "%");
+
+            // 收藏星星
+            var localFavor = [];
+            var showLocal;
+
+            if ("<%= data %>") {
+                var collectList = [];
+
+                $.get("/collect", function(e) {
+                        collectList = JSON.parse(e);
+                        refreshFavor();
+
+                    })
+                    // 辨識有無收藏
+                function refreshFavor() {
+                    var x = false;
+                    for (let index = 1; index < collectList.length; index++) {
+                        if (collectList[index].productID == "<%= rows[0].productID %>") {
+                            x = true;
+                            if (x = true) {
+                                $("#pd_star").removeClass("notStar").addClass("showStar").attr("src", "/img/index/set/P3/商品星星.png");
+                            } else {
+                                $("#pd_star").removeClass("showStar").addClass("notStar").attr("src", "/img/index/set/outBox/暗星星.png");
+                            }
+
+                        }
+                    }
+
+                }
+            } else {
+                if (localStorage.getItem("localFavor") != null) {
+                    showLocal = localStorage.getItem("localFavor").split(",");
+                    for (let index = 0; index < showLocal.length; index++) {
+                        localFavor[index] = showLocal[index];
+                    }
+                    var xx = localFavor.filter(localFavor => localFavor == "<%= rows[0].productID %>");
+                    if (xx.length != 0) {
+                        $("#pd_star").removeClass("notStar").addClass("showStar").attr("src", "/img/index/set/P3/商品星星.png");
+                    } else {
+                        $("#pd_star").removeClass("showStar").addClass("notStar").attr("src", "/img/index/set/outBox/暗星星.png");
+                    }
+                }
+            }
+
+            // 收藏加入資料庫
+            $(document).on("click", "#pd_star.notStar", function() {
+                $(this).removeClass("notStar").addClass("showStar").attr("src", "/img/index/set/P3/商品星星.png");
+
+                if ("<%= data %>") {
+
+                    collectList[0].productID = "<%= rows[0].productID %>";
+                    $.ajax({
+                        type: "post",
+                        url: "/collect",
+                        data: collectList[0]
+                    })
+                } else {
+                    localFavor[localFavor.length] = parseInt("<%= rows[0].productID %>");
+                    localStorage.setItem("localFavor", localFavor);
+                }
+            });
+            // 收藏刪除資料庫
+            $(document).on("click", "#pd_star.showStar", function() {
+                $(this).removeClass("showStar").addClass("notStar").attr("src", "/img/index/set/outBox/暗星星.png");
+
+                if ("<%= data %>") {
+                    collectList[0].productID = "<%= rows[0].productID %>";
+                    $.ajax({
+                        type: "delete",
+                        url: "/collect",
+                        data: collectList[0]
+                    })
+                } else {
+                    var result = localFavor.filter(localFavor => localFavor != "<%= rows[0].productID %>");
+                    localFavor = result;
+                    localStorage.setItem("localFavor", localFavor);
+                }
+            });
+
+        })
+
+        $(function() {
+            for (var i = 1; i <= "<%= rows[0].stock %>"; i++) {
+                a = '<option>' + i + '</option>';
+                $("#changeNum").append(a);
+            }
+
+            var shcarList = [];
+
+            $.get("/pdMsg/joincar", function(e) {
+
+                shcarList = JSON.parse(e);
+                refresh();
+            })
+
+            // 刷新可購買數量
+            var add_or_not = 0;
+
+            function refresh() {
+
+                for (var i = 0; i < shcarList.length; i++) {
+                    if (shcarList[i].productID == "<%= rows[0].productID %>") {
+                        add_or_not = 1;
+                    }
+                }
+            }
+            // 選擇購買數量
+
+            var b = 1;
+
+            $("#changeNum").change(function() {
+                b = $(this).val();
+            })
+
+            // 加入購物車
+
+            $(document).on("click", "#joinCar", function() {
+                if ("<%= data %>") {
+                    shcarList[0].quantity = b;
+                    if (add_or_not != 1) {
+                        shcarList[0].productID = "<%= rows[0].productID %>";
+                        $.ajax({
+                            type: "post",
+                            url: "/pdMsg/joincar",
+                            data: shcarList[0]
+                        })
+                        $.get("/pdMsg/joincar", function(e) {
+                            shcarList = JSON.parse(e);
+                            refresh();
+                        })
+                        Swal.fire('加入購物車')
+                    } else {
+                        console.log("up");
+                        shcarList[0].productID = "<%= rows[0].productID %>";
+                        $.ajax({
+                            type: "put",
+                            url: "/pdMsg/joincar",
+                            data: shcarList[0]
+                        })
+                        Swal.fire('加入購物車');
+                    }
+                } else {
+
+                    Swal.fire({
+                        icon: 'error',
+                        text: '請先登入',
+                    });
+                }
+            });
+
+        })
+    </script>
+
+</body>
+
+</html>

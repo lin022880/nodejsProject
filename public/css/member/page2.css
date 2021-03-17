@@ -1,0 +1,410 @@
+/* 第二頁袋子 */
+
+div#page2BoxSet {
+    position: absolute;
+    transform: translate(-49%, -49%);
+    width: 64vw;
+    height: 36vw;
+    top: 50%;
+    left: 50%;
+    overflow-x: hidden;
+}
+
+.rowBox {
+    width: 63vw;
+    height: 31%;
+    margin: 0 0 1.3% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1vw;
+    color: #707070;
+}
+
+.rowBox:last-child {
+    margin-bottom: 0;
+}
+
+.rowBox img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 左方塊 */
+
+.ltBox {
+    position: relative;
+    height: 100%;
+    width: 11vw;
+    background-image: url("/img/member/page2/左方塊.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 商品圖 */
+
+img.page2Pd {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+}
+
+
+/* 中方塊 */
+
+.mdBox {
+    position: relative;
+    height: 100%;
+    width: 43vw;
+    margin: 0 1%;
+    background-image: url("/img/member/page2/中方塊.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1vw 0;
+}
+
+.mdBox table {
+    width: 100%;
+    text-align: center;
+}
+
+.mdBox td {
+    padding: 0.5vw 0;
+}
+
+.mdBox .td1 {
+    width: 20%;
+}
+
+.mdBox .td2 {
+    width: 10%;
+}
+
+.mdBox .td3 {
+    width: 28%;
+}
+
+.mdBox .td4 {
+    width: 19%;
+}
+
+.mdBox .td5 {
+    width: 23%;
+}
+
+.mdBox .w25 {
+    width: 25%;
+    position: relative;
+}
+
+.mdBox .state1,
+.mdBox .state2,
+.mdBox .state3,
+.mdBox .state4 {
+    font-size: 0.8vw;
+    color: #707070;
+    border-color: #707070;
+}
+
+.w25 span {
+    position: relative;
+    z-index: 1;
+}
+
+.w25 hr {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 50%;
+    margin: 0;
+}
+
+
+/* 右方塊 */
+
+.rtBox {
+    position: relative;
+    height: 100%;
+    width: 8vw;
+    background-image: url("/img/member/page2/右方塊.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8vw;
+}
+
+
+/* 圖 */
+
+img.page2SetRImg {
+    height: 15%;
+    object-fit: contain;
+}
+
+#page2 {
+    display: none;
+}
+
+.page2SetRImg:first-of-type:hover {
+    filter: brightness(1.5);
+}
+
+.page2SetRImg:nth-of-type(2):hover {
+    filter: brightness(0.8);
+}
+
+.page2SetRImg:last-of-type:hover {
+    filter: brightness(1.5);
+}
+
+
+/* 商品資訊框 */
+
+.pdMsgBigBox {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 7vw;
+    height: 40vw;
+    right: -12vw;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.pdMsgBox {
+    position: relative;
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 1vw;
+}
+
+.pdMsgBoxBg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+img.pdMsgImg {
+    position: absolute;
+    right: 9%;
+    top: 16%;
+    width: 82%;
+    height: 66%;
+    object-fit: contain;
+}
+
+.pdMsgBigBox .pdMsgBox:last-child {
+    margin-bottom: 0;
+}
+
+.pdMsgBigBox::-webkit-scrollbar {
+    width: 0.3vw;
+    /* display: none; */
+}
+
+
+/* 沒有訂單 */
+
+.not_order {
+    font-size: 2vw;
+    color: white;
+    margin: auto;
+    line-height: 35vw;
+    text-align: center;
+}
+
+
+/* 訂單編輯 */
+
+.editOderBox {
+    display: none;
+    width: 72vw;
+    height: 46vw;
+    position: absolute;
+    top: -4vw;
+    left: -1vw;
+    z-index: 1;
+}
+
+img.editOderBoxBg {
+    width: 100%;
+    height: 100%;
+}
+
+img.editicon {
+    position: absolute;
+    left: 2vw;
+    top: 4.5vw;
+    width: 9vw;
+}
+
+img.editCancel {
+    width: 9vw;
+    position: absolute;
+    bottom: 5vw;
+    left: 25vw;
+}
+
+img.editOk {
+    width: 9vw;
+    position: absolute;
+    bottom: 5vw;
+    left: 36vw;
+}
+
+.box {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.editPdMsgBox {
+    width: 44vw;
+    height: 6vw;
+    top: 6vw;
+    background: #F2F2F2;
+}
+
+.editOderMsgBox {
+    top: 13vw;
+    width: 57vw;
+    height: 22vw;
+}
+
+table.editPdMsg {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2vw;
+}
+
+table.editMsg {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2vw;
+    color: #707070;
+}
+
+table.editMsg tr {
+    height: 15%;
+}
+
+table.editMsg tr:first-child {
+    height: 1%;
+}
+
+table.editMsg tr:last-child {
+    background: transparent;
+}
+
+table.editMsg tr:last-child td:first-child {
+    width: 30%;
+}
+
+.editPdMsg tbody {
+    overflow-x: hidden;
+    height: 3.8vw;
+    display: block;
+}
+
+.editPdMsg tr {
+    color: #707070;
+    width: 100%;
+    display: inline-table;
+}
+
+.editPdMsg tr:nth-child(even) {
+    background: #dbdbdb;
+}
+
+.editMsg tr:nth-child(odd) {
+    background: #F2F2F2;
+}
+
+.editMsg tr:nth-child(even) {
+    background: white;
+}
+
+td.titleBg {
+    font-size: 1vw;
+    color: white;
+    padding: 0;
+    border: solid;
+    border-color: #707070;
+    background: #707070;
+    height: 40%;
+}
+
+td.msgW1 {
+    width: 40%;
+}
+
+td.msgW2 {
+    width: 20%;
+}
+
+td.bgH {
+    font-size: 1vw;
+    height: 8%;
+    text-align: center;
+}
+
+td.editMsgTitle {
+    width: 13%;
+    padding: 0 3%;
+}
+
+input.oderAddress {
+    width: 80%;
+}
+
+textarea#order_remark {
+    resize: none;
+    width: 80%;
+}
+
+input.invoice {
+    margin-right: 0.5vw;
+    margin-left: 1vw;
+}
+
+.invoice:first-child {
+    margin-left: 0;
+}
+
+.orderPrice {
+    font-size: 1vw;
+    color: #707070;
+    position: relative;
+    width: 13vw;
+    height: 8vw;
+    right: -77%;
+    bottom: 10%;
+}
+
+.orderPrice p {
+    text-align: right;
+    margin: 0 12%;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.orderPrice hr {
+    margin: 3% 0;
+    background: #a9a9a9;
+}
+
+.orderPrice p:last-child {
+    color: #FF6B6B;
+}

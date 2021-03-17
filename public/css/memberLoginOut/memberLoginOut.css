@@ -1,0 +1,181 @@
+/* 會員登入 */
+
+div#memberBox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 98;
+    background: #00000080;
+}
+
+.memberSet {
+    position: absolute;
+    width: 100%;
+}
+
+img.memberImg {
+    width: 100%;
+}
+
+#memberCreateShow {
+    width: 75vw;
+    height: 39vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#memberLogin {
+    text-align: center;
+    color: white;
+    padding: 2vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 52%;
+    left: 50%;
+    width: 26vw;
+    height: 26vw;
+}
+
+input.memberInput {
+    font-size: 1.5vw;
+    border-radius: 13px;
+    width: 100%;
+    height: 12%;
+    margin: 3% 0;
+    padding: 0 3%;
+}
+
+#forget {
+    position: relative;
+    left: 35%;
+    font-size: 1vw;
+    color: #74DEFF;
+}
+
+#memberLogin>span:nth-of-type(2) {
+    font-size: 1.2vw;
+    color: #FF5353;
+}
+
+.memberLoginCkbox {
+    text-align: center;
+    margin: 3% 0;
+    font-size: 1.3vw;
+}
+
+.memberLoginCkbox>input {
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 3%;
+}
+
+#loginImg {
+    display: block;
+    margin: 4% auto;
+    width: 18%;
+}
+
+#loginImg:hover {
+    filter: hue-rotate(45deg);
+}
+
+#goCreate {
+    color: white;
+}
+
+#goCreate:hover {
+    color: #666666;
+}
+
+
+/* 關閉 */
+
+.memberClose {
+    width: 10vw;
+    height: 2vw;
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    z-index: 1;
+}
+
+
+/* 會員註冊 */
+
+#memberLoginShow {
+    width: 75vw;
+    height: 39vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+div#memberCreate {
+    text-align: center;
+    color: white;
+    padding: 2vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 51%;
+    left: 50%;
+    width: 30vw;
+    height: 28vw;
+}
+
+input.memberInput2 {
+    font-size: 1.5vw;
+    padding: 0 3%;
+    border-radius: 13px;
+    width: 80%;
+    height: 100%;
+}
+
+.memberCreateInput {
+    margin: 5% 0;
+    height: 12%;
+}
+
+.memberCreateInput:nth-of-type(3) {
+    margin-bottom: 8%;
+}
+
+div#memberCreate span {
+    font-size: 1.5vw;
+    margin-right: 3%;
+}
+
+.memberCreateCkbox {
+    font-size: 1.2vw;
+    margin: 3% 0;
+    text-align: left;
+    width: 18vw;
+    position: relative;
+    left: 26%;
+}
+
+.memberCreateCkbox>input {
+    width: 1vw;
+    height: 1vw;
+}
+
+#memberCreate>img {
+    width: 9vw;
+}
+
+#create:hover {
+    filter: brightness(1.1);
+}
+
+.submitLabel {
+    display: block;
+}
+
+#createButton {
+    display: none;
+}
+
+#loginButton {
+    display: none;
+}

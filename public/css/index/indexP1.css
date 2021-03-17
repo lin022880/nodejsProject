@@ -1,0 +1,391 @@
+/* P1↓ */
+
+#myOrderGame {
+    background-image: url("../../img/index/set/gameBG/gameBG4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 廣告整個位置 */
+
+.AdSetPosition {
+    width: 63vw;
+    height: 40vh;
+    position: relative;
+    top: 10vh;
+    margin: auto;
+}
+
+
+/* 廣告右鍵 */
+
+img#AdR {
+    position: absolute;
+    height: 40vh;
+    right: 0;
+    top: 0;
+}
+
+#AdL:hover,
+#AdR:hover {
+    background: url("../../img/index/set/P1/木馬.png");
+    background-size: cover;
+}
+
+
+/* 廣告左鍵 */
+
+img#AdL {
+    position: absolute;
+    height: 40vh;
+    left: 0;
+    top: 0;
+}
+
+
+/* 廣告中間袋子 */
+
+div.AD {
+    width: 93%;
+    height: 40vh;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+div.AD img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+/* 廣告底部按鈕 */
+
+.adBottom {
+    position: unset;
+    text-align: center;
+}
+
+.adBottom>img {
+    width: 6%;
+    margin: 1.2vw 0.5vw 0;
+    filter: brightness(0.5);
+}
+
+.B.active {
+    filter: brightness(1);
+}
+
+
+/* NEW MSG */
+
+div#newMSGBox {
+    width: 45vw;
+    height: 18vw;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 2%;
+    text-align: left;
+}
+
+img#newMSGImg {
+    height: 100%;
+    position: relative;
+    left: -1%;
+    object-fit: contain;
+}
+
+div#newMSG {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 53%;
+    left: 50%;
+}
+
+div#newMSG>p {
+    width: 36vw;
+    font-size: 1.2vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* set左邊 */
+
+.setL1 {
+    position: absolute;
+    top: 18vh;
+    left: 40px;
+}
+
+.setL1-2 {
+    position: absolute;
+    top: 47vh;
+    left: 40px;
+}
+
+div.setL1P {
+    color: white;
+    width: 11vw;
+    height: 3vw;
+    position: absolute;
+    left: 3%;
+    top: 95%;
+    z-index: 1;
+    font-size: 1vw;
+    overflow: hidden;
+}
+
+div.setL1P>span {
+    position: relative;
+    top: 100%;
+}
+
+.setL1:hover>.setL1P>span,
+.setL1-2:hover>.setL1P>span {
+    transition: top 0.5s;
+    top: 0%;
+}
+
+.setL1Img2:hover~.setL1P>span {
+    top: 100%;
+}
+
+.setL1PriceSet {
+    position: absolute;
+    top: 77%;
+    right: 0%;
+    color: white;
+    width: 5.5vw;
+    height: 2.5vw;
+    z-index: 1;
+}
+
+img.setL1PPriceImg {
+    width: 100%;
+}
+
+span.setL1Price {
+    position: absolute;
+    left: 8%;
+    bottom: 25%;
+    font-size: 1.1vw;
+}
+
+img.setL1Img {
+    width: 11vw;
+    height: 11vw;
+}
+
+img.setL1Img2 {
+    width: 16vw;
+    position: absolute;
+    left: 52%;
+    top: 10%;
+    transform: translate(-50%, -63%);
+}
+
+img#productNew {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.setL2 {
+    position: absolute;
+    left: 30px;
+    top: 75vh;
+}
+
+.setL2-2 {
+    width: 12vw;
+    height: 5vw;
+    position: absolute;
+    left: 20px;
+    bottom: 2%;
+}
+
+img#ios {
+    width: 7vw;
+    position: absolute;
+}
+
+img#android {
+    width: 7vw;
+    position: absolute;
+    top: 50%;
+}
+
+img#QR {
+    width: 4.5vw;
+    position: absolute;
+    right: 0;
+}
+
+
+/* 廣告字體顏色 */
+
+.setLadP {
+    position: relative;
+    left: -10px;
+    margin: 3% 0;
+    color: white;
+}
+
+.setLadP>h2 {
+    display: inline;
+    font-size: 1.8vw;
+}
+
+.setLadP>span {
+    font-size: 1.1vw;
+}
+
+
+/* set右邊 */
+
+#discountButton {
+    position: absolute;
+    width: 15vw;
+    top: -22vh;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/* 右邊小遊戲 */
+
+.setR1 {
+    position: absolute;
+    top: 37vh;
+    right: 30px;
+}
+
+img#setR1Img {
+    width: 13vw;
+    height: 13vw;
+}
+
+.playGame {
+    position: relative;
+}
+
+span#gameName {
+    width: 13vw;
+    text-align: center;
+    font-size: 1.3vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: -18%;
+    color: white;
+    z-index: 1;
+}
+
+img#gameNameImg {
+    width: 11vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: -18%;
+}
+
+img#playGame {
+    object-fit: contain;
+    width: 13vw;
+    height: 13vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 右邊廣告 */
+
+div#adRight {
+    position: absolute;
+    right: 30px;
+    bottom: 5%;
+    overflow: hidden;
+    width: 13vw;
+    height: 7vw;
+}
+
+#adRightImg {
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 右邊影片 */
+
+div#adVideoSet {
+    position: absolute;
+    right: 30px;
+    bottom: 21%;
+    overflow: hidden;
+    width: 13vw;
+    height: 6vw;
+}
+
+img#adVideo {
+    width: 100%;
+}
+
+div#adVideoImgBox {
+    position: absolute;
+    width: 8vw;
+    height: 4vw;
+    transform: translate(-50%, -53%);
+    top: 50%;
+    left: 50%;
+}
+
+img#adVideoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img#adVideoIcon {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+    background: #0000009c;
+}
+
+.notShow {
+    display: none;
+}
+
+img#adVideoImg:hover~.notShow {
+    display: block;
+}
+
+.notShow:hover {
+    display: block;
+}
+
+
+/* P1↑ */
